@@ -258,8 +258,6 @@
     const candidate = candidates.find(item => item.id === activeCandidateId);
     if (!candidate) return;
     const personal = getPersonal(candidate.id);
-      ? `<img src="${escapeHTML(imageUrl)}" alt="${escapeHTML(candidate.name)}">`
-      : `<span class="photo-placeholder">公式写真<br>未登録</span>`;
 
     let panel = "";
     if (activeTab === "profile") panel = profilePanel(candidate);
