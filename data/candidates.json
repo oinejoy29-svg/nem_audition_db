@@ -12,9 +12,9 @@
       "height": "165cm",
       "bloodType": "O型",
       "hobbies": "ゲーム、FPS（Overwatch 2）",
-      "skills": "ベースギター弾けます！",
+      "skills": "ベースギター",
       "pastAchievements": "",
-      "enthusiasm": ""
+      "enthusiasm": "音楽の仕事を目指して来日し、≠MEの音楽に惹かれて挑戦。"
     },
     "screenings": [],
     "statements": []
@@ -31,10 +31,10 @@
       "hometown": "韓国",
       "height": "160cm",
       "bloodType": "B型",
-      "hobbies": "TikTok撮ること",
+      "hobbies": "TikTok撮影",
       "skills": "ダンス",
       "pastAchievements": "",
-      "enthusiasm": ""
+      "enthusiasm": "パフォーマンスを通じて笑顔と元気を届けたいと語る。"
     },
     "screenings": [],
     "statements": []
@@ -46,7 +46,7 @@
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_ishida_chiho",
     "profile": {
-      "reading": "",
+      "reading": "いしだ ちほ",
       "birthDate": "2002年3月17日",
       "hometown": "広島県",
       "height": "157cm",
@@ -54,7 +54,7 @@
       "hobbies": "カメラ",
       "skills": "ら行言葉、素早くバンジージャンプを飛ぶ",
       "pastAchievements": "",
-      "enthusiasm": ""
+      "enthusiasm": "これまでのグループの歴史を尊重し、将来はグループを引っ張れる存在を目指す。"
     },
     "screenings": [],
     "statements": []
@@ -66,7 +66,7 @@
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_ishihara_arisa",
     "profile": {
-      "reading": "",
+      "reading": "いしはら ありさ",
       "birthDate": "2002年10月13日",
       "hometown": "埼玉県",
       "height": "162cm",
@@ -74,7 +74,7 @@
       "hobbies": "愛犬と過ごす、コーデを考える",
       "skills": "変顔、歌",
       "pastAchievements": "",
-      "enthusiasm": ""
+      "enthusiasm": "アイドルに再挑戦する覚悟を持ち、これまでの経験を生かしたいと語る。"
     },
     "screenings": [],
     "statements": []
@@ -86,7 +86,7 @@
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_inoue_hiroi",
     "profile": {
-      "reading": "",
+      "reading": "いのうえ ひろい",
       "birthDate": "2005年2月22日",
       "hometown": "東京都",
       "height": "157cm",
@@ -94,3 +94,549 @@
       "hobbies": "お部屋のおかたづけ",
       "skills": "人より汗をあまりかかないこと",
       "pastAchievements": "",
+      "enthusiasm": "唯一無二の個性を加え、ほかのメンバーも輝かせられる存在を目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_fbbb039e369c",
+    "name": "今枝 桜",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_imaeda_sakura",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年3月25日",
+      "hometown": "愛知県",
+      "height": "153cm",
+      "bloodType": "B型",
+      "hobbies": "脱出ゲーム、謎解き",
+      "skills": "ジャズダンス",
+      "pastAchievements": "",
+      "enthusiasm": "幼少期からの歌やダンスの経験を生かし、元気を届けたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_e709addeb6ed",
+    "name": "井餘田 華",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_iyota_hana",
+    "profile": {
+      "reading": "",
+      "birthDate": "2006年11月7日",
+      "hometown": "東京都",
+      "height": "161cm",
+      "bloodType": "O型",
+      "hobbies": "散歩、愛犬たちと遊ぶこと",
+      "skills": "一度会った人や通った道を忘れない、ご飯を美味しそうに食べる",
+      "pastAchievements": "",
+      "enthusiasm": "長年のダンス経験と継続力を生かしてグループに貢献したいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_ee4e547a5bd2",
+    "name": "小笠原 愛桜",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_ogasawara_ao",
+    "profile": {
+      "reading": "",
+      "birthDate": "2008年1月27日",
+      "hometown": "埼玉県",
+      "height": "155cm",
+      "bloodType": "A型",
+      "hobbies": "ディズニー関連、お笑い鑑賞、ゲーム、カフェラテ",
+      "skills": "ダンス、歌、ディズニーのモノマネ、ポジティブでいること",
+      "pastAchievements": "",
+      "enthusiasm": "幼い頃から続けたダンスと歌を生かし、応援されるアイドルを目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_691e8fca83e6",
+    "name": "岡野 詩慧",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_okano_shie",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年9月6日",
+      "hometown": "愛知県",
+      "height": "161cm",
+      "bloodType": "A型",
+      "hobbies": "犬を愛でる、食べること、お買い物",
+      "skills": "中国語、韓国語",
+      "pastAchievements": "",
+      "enthusiasm": "≠MEとの出会いでアイドルの魅力を知り、強い覚悟で挑戦すると語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_3bc72606f784",
+    "name": "荻山 さくら",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_ogiyama_sakura",
+    "profile": {
+      "reading": "",
+      "birthDate": "2012年4月24日",
+      "hometown": "愛知県",
+      "height": "149cm",
+      "bloodType": "A型",
+      "hobbies": "ギター、歌うこと",
+      "skills": "ドラム、ダンス",
+      "pastAchievements": "",
+      "enthusiasm": "感謝を忘れず全力で取り組み、元気を届けられるアイドルを目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_e5a69bc3e13c",
+    "name": "河野 奈々帆",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_kawano_nanaho",
+    "profile": {
+      "reading": "",
+      "birthDate": "2002年5月18日",
+      "hometown": "大阪府",
+      "height": "163cm",
+      "bloodType": "A型",
+      "hobbies": "アニメ鑑賞、散歩",
+      "skills": "片手ロンダート、早食い、人の変化にすぐ気づく",
+      "pastAchievements": "",
+      "enthusiasm": "今回の挑戦に全力を注ぎ、後悔のないよう表現したいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_e3830de5f8fd",
+    "name": "北野 心絆",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_kitano_kona",
+    "profile": {
+      "reading": "",
+      "birthDate": "2010年9月23日",
+      "hometown": "三重県",
+      "height": "161cm",
+      "bloodType": "A型",
+      "hobbies": "食べること、粘土造り",
+      "skills": "反復横跳び、がむしゃらに頑張れること",
+      "pastAchievements": "",
+      "enthusiasm": "成長意欲を生かし、東京ドームに立つ日まで努力したいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_5db72e75cd5d",
+    "name": "木村 莉子",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_kimura_riko",
+    "profile": {
+      "reading": "",
+      "birthDate": "2008年8月22日",
+      "hometown": "東京都",
+      "height": "159cm",
+      "bloodType": "B型",
+      "hobbies": "百人一首、韓国語・中国語の学習、ドラマ・映画鑑賞",
+      "skills": "ダンス、メイク、表情管理",
+      "pastAchievements": "",
+      "enthusiasm": "歌とダンスが好きな高校生として、大きな舞台で人を幸せにする夢を語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_e569bdc85eaa",
+    "name": "小泉 のん",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_koizumi_non",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年9月27日",
+      "hometown": "山梨県",
+      "height": "158cm",
+      "bloodType": "A型",
+      "hobbies": "作詞、文章創作、自己プロデュース、≠MEの曲を聴くこと",
+      "skills": "500円玉を目に挟むこと、夢のために努力すること",
+      "pastAchievements": "",
+      "enthusiasm": "モデル活動の経験を持ち、グループの歩みを尊重しながら新しい力になりたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_1bf0082f1d9b",
+    "name": "佐藤 涼風",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_sato_suzuka",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年6月26日",
+      "hometown": "神奈川県",
+      "height": "167cm",
+      "bloodType": "B型",
+      "hobbies": "ゲーム、音楽鑑賞、御朱印集め、サウナ、温泉",
+      "skills": "歌、散歩",
+      "pastAchievements": "",
+      "enthusiasm": "≠MEの楽曲に励まされ、今度は自分のパフォーマンスで思いを届けたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_cd8e5ef5bcac",
+    "name": "柴田 みつる",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_shibata_mitsuru",
+    "profile": {
+      "reading": "",
+      "birthDate": "2007年1月9日",
+      "hometown": "千葉県",
+      "height": "163cm",
+      "bloodType": "A型",
+      "hobbies": "ガチャガチャ、ハンドメイド、散歩",
+      "skills": "似顔絵、ハンドメイド、着物を着ること",
+      "pastAchievements": "",
+      "enthusiasm": "グループの歴史を大切にしながら成長し、パフォーマンスで魅力を伝えたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_a4e7e8934fad",
+    "name": "白石 美空",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_shiraishi_misora",
+    "profile": {
+      "reading": "",
+      "birthDate": "2006年10月19日",
+      "hometown": "埼玉県",
+      "height": "161cm",
+      "bloodType": "O型",
+      "hobbies": "≠MEの曲を聴くこと、友達とおしゃべり",
+      "skills": "誰とでもすぐ打ち解ける、マシンガントーク",
+      "pastAchievements": "",
+      "enthusiasm": "バレエやチアダンスの経験を生かし、自分ならではの表現を見つけたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_05cad8198c49",
+    "name": "鈴木 麗衣",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_suzuki_rii",
+    "profile": {
+      "reading": "",
+      "birthDate": "2009年9月7日",
+      "hometown": "東京都",
+      "height": "162cm",
+      "bloodType": "B型",
+      "hobbies": "編み物、かわいい小物や植物の写真を撮ること",
+      "skills": "耳を動かせること",
+      "pastAchievements": "",
+      "enthusiasm": "歌とダンスが好きで、努力を重ねて心に残るメンバーを目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_5ea03e5b1e95",
+    "name": "徳永 心葉",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_tokunaga_konoha",
+    "profile": {
+      "reading": "",
+      "birthDate": "2007年10月19日",
+      "hometown": "宮崎県",
+      "height": "165cm",
+      "bloodType": "不明",
+      "hobbies": "旅行、おしゃべり",
+      "skills": "歌、腕相撲",
+      "pastAchievements": "",
+      "enthusiasm": "歌とダンスの経験を生かし、自分らしい笑顔で人の心を動かしたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_d69bfc821f84",
+    "name": "中村 釉香",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_nakamura_yuka",
+    "profile": {
+      "reading": "",
+      "birthDate": "2006年2月16日",
+      "hometown": "大阪府",
+      "height": "165cm",
+      "bloodType": "A型",
+      "hobbies": "ミュージカルの曲を歌うこと、食べること",
+      "skills": "料理、掃除、洗濯",
+      "pastAchievements": "",
+      "enthusiasm": "歌と踊りへの思いを胸に、≠MEと同じステージに立つ夢を目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_b3e983d16f2e",
+    "name": "那須 咲月",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_nasu_satsuki",
+    "profile": {
+      "reading": "",
+      "birthDate": "2011年9月15日",
+      "hometown": "兵庫県",
+      "height": "155cm",
+      "bloodType": "O型",
+      "hobbies": "飼い犬と遊ぶこと",
+      "skills": "粘土でお花を作ること",
+      "pastAchievements": "",
+      "enthusiasm": "次の審査へ進めたことに感謝し、自分らしく最後まで挑むと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_91dcf3b8af63",
+    "name": "成石 亜里紗",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_naruishi_arisa",
+    "profile": {
+      "reading": "",
+      "birthDate": "2008年5月1日",
+      "hometown": "東京都",
+      "height": "156cm",
+      "bloodType": "A型",
+      "hobbies": "舞台観劇、かわいいアイドルを見ること",
+      "skills": "回った後に真っ直ぐ歩けること、歌",
+      "pastAchievements": "",
+      "enthusiasm": "ミュージカル経験を生かし、誰かの背中を押せる存在を目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_99bc1735b6ab",
+    "name": "林 美澪",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_hayashi_mirei",
+    "profile": {
+      "reading": "",
+      "birthDate": "2009年3月10日",
+      "hometown": "愛知県",
+      "height": "160cm",
+      "bloodType": "O型",
+      "hobbies": "音楽鑑賞、言語の勉強",
+      "skills": "パフォーマンスでの表現、表情管理",
+      "pastAchievements": "",
+      "enthusiasm": "長年のダンスとアイドル活動の経験を生かし、初心を忘れず貢献したいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_71426cc6565f",
+    "name": "樋口 美沙",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_higuchi_misa",
+    "profile": {
+      "reading": "",
+      "birthDate": "2003年8月4日",
+      "hometown": "東京都",
+      "height": "163cm",
+      "bloodType": "O型",
+      "hobbies": "編み物",
+      "skills": "ダンス、アクロバット、バレーボール",
+      "pastAchievements": "",
+      "enthusiasm": "チアやダンス、アイドルのサポート経験を生かし、自ら表現する側を目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_a4e306a16ba3",
+    "name": "日野 美羽",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_hino_mihane",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年9月2日",
+      "hometown": "埼玉県",
+      "height": "169cm",
+      "bloodType": "B型",
+      "hobbies": "読書、かき氷巡り、≠ME楽曲のイントロ当て",
+      "skills": "ダンス、お菓子作り",
+      "pastAchievements": "",
+      "enthusiasm": "結成当時からのファンとして、グループへの思いと高身長を生かしたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_f638a4e4bb1f",
+    "name": "宮内 菜々美",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_miyauchi_nanami",
+    "profile": {
+      "reading": "",
+      "birthDate": "2009年10月13日",
+      "hometown": "兵庫県",
+      "height": "164cm",
+      "bloodType": "A型",
+      "hobbies": "メイク、バレーボール",
+      "skills": "ギター、ダンス",
+      "pastAchievements": "",
+      "enthusiasm": "笑顔や元気を届け、応援してよかったと思ってもらえるアイドルを目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_2fc529ed5fff",
+    "name": "宮野 陽菜",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_miyano_hina",
+    "profile": {
+      "reading": "",
+      "birthDate": "2010年9月16日",
+      "hometown": "群馬県",
+      "height": "155cm",
+      "bloodType": "O型",
+      "hobbies": "しゃべること、歌、ダンス",
+      "skills": "ポジティブシンキング、小指の短さ",
+      "pastAchievements": "",
+      "enthusiasm": "明るく全力で取り組み、ライブで感じた感動を届けたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_9d8067eb549f",
+    "name": "森 真梨子",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_mori_mariko",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年7月16日",
+      "hometown": "東京都",
+      "height": "156cm",
+      "bloodType": "O型",
+      "hobbies": "温泉、湘南徘徊、睡眠",
+      "skills": "クラシックバレエ",
+      "pastAchievements": "",
+      "enthusiasm": "幼い頃からのアイドルになる夢を、≠MEで叶えたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_0182dfa5a89b",
+    "name": "矢野 咲香",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_yano_sayaka",
+    "profile": {
+      "reading": "",
+      "birthDate": "2003年8月31日",
+      "hometown": "大分県",
+      "height": "158cm",
+      "bloodType": "B型",
+      "hobbies": "ダンス、はちみつとおまんじゅうを毎日食べること",
+      "skills": "ダンス、ピアノ",
+      "pastAchievements": "",
+      "enthusiasm": "小学生から続けたダンスを武器に、全力の歌と踊りで感動を届けたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_ce1756f678a4",
+    "name": "横山 結愛",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_yokoyama_yuua",
+    "profile": {
+      "reading": "",
+      "birthDate": "2011年8月27日",
+      "hometown": "宮城県",
+      "height": "156cm",
+      "bloodType": "A型",
+      "hobbies": "メイク",
+      "skills": "歌",
+      "pastAchievements": "",
+      "enthusiasm": "歌とダンスの経験を出し切り、後悔のないよう挑戦したいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_927b7afcf69b",
+    "name": "吉野 心春",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_yoshino_koharu",
+    "profile": {
+      "reading": "",
+      "birthDate": "2008年2月24日",
+      "hometown": "東京都",
+      "height": "161cm",
+      "bloodType": "O型",
+      "hobbies": "釣り、女の子の服を見ること",
+      "skills": "器械体操、歌",
+      "pastAchievements": "",
+      "enthusiasm": "自分らしい表現を見つけ、人に元気と勇気を届けられる存在を目指す。"
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_5a8caf5fef3d",
+    "name": "羅瑞婷",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_lo_juiting",
+    "profile": {
+      "reading": "",
+      "birthDate": "2004年8月6日",
+      "hometown": "台湾",
+      "height": "156cm",
+      "bloodType": "A型",
+      "hobbies": "ダンス、パン作り、動画編集、語学学習、アニメ鑑賞",
+      "skills": "歌、作詞作曲、弾き語り、5か国語、人のMBTIを当てること",
+      "pastAchievements": "",
+      "enthusiasm": "台湾でのアイドル活動などを生かし、日本と台湾の懸け橋になりたいと語る。"
+    },
+    "screenings": [],
+    "statements": []
+  }
+]
