@@ -1,1 +1,96 @@
-
+[
+  {
+    "id": "cand_13d08a75a8da",
+    "name": "イ・ソユル",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_lee_seoyul",
+    "profile": {
+      "reading": "",
+      "birthDate": "2006年12月23日",
+      "hometown": "韓国",
+      "height": "165cm",
+      "bloodType": "O型",
+      "hobbies": "ゲーム、FPS（Overwatch 2）",
+      "skills": "ベースギター弾けます！",
+      "pastAchievements": "",
+      "enthusiasm": ""
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_e0dffa0e7b05",
+    "name": "イ・ダイン",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_lee_dain",
+    "profile": {
+      "reading": "",
+      "birthDate": "2007年3月6日",
+      "hometown": "韓国",
+      "height": "160cm",
+      "bloodType": "B型",
+      "hobbies": "TikTok撮ること",
+      "skills": "ダンス",
+      "pastAchievements": "",
+      "enthusiasm": ""
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_b54a10e247fb",
+    "name": "石田 千穂",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_ishida_chiho",
+    "profile": {
+      "reading": "",
+      "birthDate": "2002年3月17日",
+      "hometown": "広島県",
+      "height": "157cm",
+      "bloodType": "O型",
+      "hobbies": "カメラ",
+      "skills": "ら行言葉、素早くバンジージャンプを飛ぶ",
+      "pastAchievements": "",
+      "enthusiasm": ""
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_5a592211d1e9",
+    "name": "石原 愛梨沙",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_ishihara_arisa",
+    "profile": {
+      "reading": "",
+      "birthDate": "2002年10月13日",
+      "hometown": "埼玉県",
+      "height": "162cm",
+      "bloodType": "O型",
+      "hobbies": "愛犬と過ごす、コーデを考える",
+      "skills": "変顔、歌",
+      "pastAchievements": "",
+      "enthusiasm": ""
+    },
+    "screenings": [],
+    "statements": []
+  },
+  {
+    "id": "cand_8d3cc0d0b044",
+    "name": "井上 弥生",
+    "team": "",
+    "imageUrl": "",
+    "officialUrl": "https://not-equal-me.jp/pages/specialsite_inoue_hiroi",
+    "profile": {
+      "reading": "",
+      "birthDate": "2005年2月22日",
+      "hometown": "東京都",
+      "height": "157cm",
+      "bloodType": "O型",
+      "hobbies": "お部屋のおかたづけ",
+      "skills": "人より汗をあまりかかないこと",
+      "pastAchievements": "",
