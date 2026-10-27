@@ -339,7 +339,7 @@
       });
       renderList();
     } catch (error) {
-      console.error("Candidate data could not be loaded.");
+      console.error("Candidate data could not be loaded:", error);
       listStatus.textContent = "候補者データを読み込めませんでした。ファイル構成とJSON形式を確認してください。";
       emptyState.hidden = false;
       emptyState.querySelector("h2").textContent = "データを読み込めませんでした";
