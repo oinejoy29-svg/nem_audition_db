@@ -135,3 +135,116 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   .info-grid { grid-template-columns: 1fr; }
   .info-item { padding: 12px; }
 }
+
+/* ========================================
+   写真なし・コンパクトな候補者カード
+   ======================================== */
+
+/* カード全体 */
+.candidate-card {
+  border: 2px solid var(--team-color, var(--line));
+  border-radius: 13px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+/* 写真とプレースホルダーを非表示 */
+.candidate-card .candidate-photo,
+.profile-heading .profile-image {
+  display: none !important;
+}
+
+/* 候補者一覧のカード */
+.card-copy {
+  padding: 13px 12px 7px;
+}
+
+.candidate-name {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.team-label {
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+/* いいね・お気に入り */
+.card-actions {
+  padding: 5px 10px 11px;
+  gap: 5px;
+}
+
+.like-summary {
+  gap: 4px;
+}
+
+.mini-like {
+  min-height: 27px;
+  padding: 4px 7px;
+}
+
+/* 個別ページ：写真なしで横幅を活用 */
+.profile-heading {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.profile-meta h1 {
+  margin: 8px 0;
+}
+
+/* 活動歴を表示するタグ */
+.activity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.activity-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9d2c6;
+  background: #fffdf9;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .candidate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .candidate-card {
+    border-radius: 11px;
+  }
+
+  .card-copy {
+    padding: 10px 9px 5px;
+  }
+
+  .candidate-name {
+    font-size: 13px;
+  }
+
+  .card-actions {
+    padding: 5px 7px 9px;
+    flex-wrap: wrap;
+  }
+
+  .profile-heading {
+    display: block;
+  }
+
+  .activity-tag {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
