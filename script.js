@@ -109,13 +109,13 @@
       const personal = getPersonal(candidate.id);
       const article = document.createElement("article");
       article.className = "candidate-card";
-      const imageUrl = safeUrl(candidate.imageUrl);
-      const image = imageUrl
-        ? `<img src="${escapeHTML(imageUrl)}" alt="${escapeHTML(candidate.name)}" loading="lazy">`
-        : `<span class="photo-placeholder">公式写真<br>未登録</span>`;
+      article.style.setProperty(
+        "--team-color",
+        TEAM_COLORS[candidate.team] || "#e5e0d7"
+      );
+      
       article.innerHTML = `
         <button class="card-open" type="button" data-open="${escapeHTML(candidate.id)}" aria-label="${escapeHTML(candidate.name)}のプロフィールを開く">
-          <div class="candidate-photo">${image}</div>
           <div class="card-copy">
             ${teamMarkup(candidate.team)}
             <span class="candidate-name">${escapeHTML(candidate.name)}</span>
@@ -180,6 +180,28 @@
     return `<button class="tab-button" type="button" role="tab" data-tab="${key}" aria-selected="${activeTab === key}">${label}</button>`;
   }
 
+  function activityMarkup(candidate) {
+  const profile = candidate.profile || {};
+  const history = profile.pastAchievements || "";
+
+  const activities = String(history)
+    .split(/[\/／]/)
+    .map(item => item.trim())
+    .filter(Boolean);
+
+  if (!activities.length) return "";
+
+  return `
+    <section class="info-section">
+      <h3>活動歴</h3>
+      <div class="activity-tags">
+        ${activities.map(item => `
+          <span class="activity-tag">${escapeHTML(item)}</span>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
   function profilePanel(candidate) {
     const profile = candidate.profile || {};
     const officialUrl = safeUrl(candidate.officialUrl);
@@ -193,10 +215,6 @@
         ${infoItem("趣味", profile.hobbies)}
         ${infoItem("特技", profile.skills)}
       </div>
-      <section class="info-section">
-        <h3>過去実績</h3>
-        <div class="info-value">${valueOrFallback(profile.pastAchievements)}</div>
-      </section>
       ${profile.enthusiasm ? `<section class="info-section"><h3>意気込み</h3><div class="info-value">${valueOrFallback(profile.enthusiasm)}</div></section>` : ""}
       ${officialUrl ? `<p><a class="external-link" href="${escapeHTML(officialUrl)}" target="_blank" rel="noopener noreferrer">公式プロフィールを見る ↗</a></p>` : `<p class="memo-help">公式プロフィールURLは未登録です。</p>`}
     `;
@@ -240,8 +258,6 @@
     const candidate = candidates.find(item => item.id === activeCandidateId);
     if (!candidate) return;
     const personal = getPersonal(candidate.id);
-    const imageUrl = safeUrl(candidate.imageUrl);
-    const image = imageUrl
       ? `<img src="${escapeHTML(imageUrl)}" alt="${escapeHTML(candidate.name)}">`
       : `<span class="photo-placeholder">公式写真<br>未登録</span>`;
 
@@ -253,7 +269,6 @@
 
     detailContent.innerHTML = `
       <section class="profile-heading">
-        <div class="profile-image">${image}</div>
         <div class="profile-meta">
           ${teamMarkup(candidate.team)}
           <h1>${escapeHTML(candidate.name)}</h1>
@@ -264,6 +279,7 @@
           </div>
         </div>
       </section>
+      ${activityMarkup(candidate)}
       <section class="personal-panel">
         <h2>自分用の評価</h2>
         <div class="evaluation-row">
