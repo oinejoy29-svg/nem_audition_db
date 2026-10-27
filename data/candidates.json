@@ -2,7 +2,7 @@
   {
     "id": "cand_13d08a75a8da",
     "name": "イ・ソユル",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_lee_seoyul",
     "profile": {
@@ -17,12 +17,13 @@
       "enthusiasm": "音楽の仕事を目指して来日し、≠MEの音楽に惹かれて挑戦。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_e0dffa0e7b05",
     "name": "イ・ダイン",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_lee_dain",
     "profile": {
@@ -37,12 +38,13 @@
       "enthusiasm": "パフォーマンスを通じて笑顔と元気を届けたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_b54a10e247fb",
     "name": "石田 千穂",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_ishida_chiho",
     "profile": {
@@ -53,16 +55,20 @@
       "bloodType": "O型",
       "hobbies": "カメラ",
       "skills": "ら行言葉、素早くバンジージャンプを飛ぶ",
-      "pastAchievements": "",
+      "pastAchievements": "元STU48/アクターズスクール広島",
       "enthusiasm": "これまでのグループの歴史を尊重し、将来はグループを引っ張れる存在を目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "アイドル",
+      "芸能スクール"
+    ]
   },
   {
     "id": "cand_5a592211d1e9",
     "name": "石原 愛梨沙",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_ishihara_arisa",
     "profile": {
@@ -73,16 +79,19 @@
       "bloodType": "O型",
       "hobbies": "愛犬と過ごす、コーデを考える",
       "skills": "変顔、歌",
-      "pastAchievements": "",
+      "pastAchievements": "虹のコンキスタドール",
       "enthusiasm": "アイドルに再挑戦する覚悟を持ち、これまでの経験を生かしたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "アイドル"
+    ]
   },
   {
     "id": "cand_8d3cc0d0b044",
     "name": "井上 弥生",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_inoue_hiroi",
     "profile": {
@@ -97,12 +106,13 @@
       "enthusiasm": "唯一無二の個性を加え、ほかのメンバーも輝かせられる存在を目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_fbbb039e369c",
     "name": "今枝 桜",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_imaeda_sakura",
     "profile": {
@@ -113,16 +123,20 @@
       "bloodType": "B型",
       "hobbies": "脱出ゲーム、謎解き",
       "skills": "ジャズダンス",
-      "pastAchievements": "",
+      "pastAchievements": "子役　ミュージカル出演",
       "enthusiasm": "幼少期からの歌やダンスの経験を生かし、元気を届けたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "子役",
+      "ミュージカル・舞台"
+    ]
   },
   {
     "id": "cand_e709addeb6ed",
     "name": "井餘田 華",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_iyota_hana",
     "profile": {
@@ -133,16 +147,20 @@
       "bloodType": "O型",
       "hobbies": "散歩、愛犬たちと遊ぶこと",
       "skills": "一度会った人や通った道を忘れない、ご飯を美味しそうに食べる",
-      "pastAchievements": "",
+      "pastAchievements": "PRODUCE　101 JAPAN / Nu FEEL",
       "enthusiasm": "長年のダンス経験と継続力を生かしてグループに貢献したいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "オーディション番組",
+      "音楽・パフォーマンス"
+    ]
   },
   {
     "id": "cand_ee4e547a5bd2",
     "name": "小笠原 愛桜",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_ogasawara_ao",
     "profile": {
@@ -153,16 +171,19 @@
       "bloodType": "A型",
       "hobbies": "ディズニー関連、お笑い鑑賞、ゲーム、カフェラテ",
       "skills": "ダンス、歌、ディズニーのモノマネ、ポジティブでいること",
-      "pastAchievements": "",
+      "pastAchievements": "EXPG STUDIO　TOKYO",
       "enthusiasm": "幼い頃から続けたダンスと歌を生かし、応援されるアイドルを目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "芸能スクール"
+    ]
   },
   {
     "id": "cand_691e8fca83e6",
     "name": "岡野 詩慧",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_okano_shie",
     "profile": {
@@ -177,12 +198,13 @@
       "enthusiasm": "≠MEとの出会いでアイドルの魅力を知り、強い覚悟で挑戦すると語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_3bc72606f784",
     "name": "荻山 さくら",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_ogiyama_sakura",
     "profile": {
@@ -197,12 +219,13 @@
       "enthusiasm": "感謝を忘れず全力で取り組み、元気を届けられるアイドルを目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_e5a69bc3e13c",
     "name": "河野 奈々帆",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_kawano_nanaho",
     "profile": {
@@ -213,16 +236,20 @@
       "bloodType": "A型",
       "hobbies": "アニメ鑑賞、散歩",
       "skills": "片手ロンダート、早食い、人の変化にすぐ気づく",
-      "pastAchievements": "",
+      "pastAchievements": "元NMB48　NARLOW",
       "enthusiasm": "今回の挑戦に全力を注ぎ、後悔のないよう表現したいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "アイドル",
+      "音楽・パフォーマンス"
+    ]
   },
   {
     "id": "cand_e3830de5f8fd",
     "name": "北野 心絆",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_kitano_kona",
     "profile": {
@@ -237,12 +264,13 @@
       "enthusiasm": "成長意欲を生かし、東京ドームに立つ日まで努力したいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_5db72e75cd5d",
     "name": "木村 莉子",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_kimura_riko",
     "profile": {
@@ -257,12 +285,13 @@
       "enthusiasm": "歌とダンスが好きな高校生として、大きな舞台で人を幸せにする夢を語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_e569bdc85eaa",
     "name": "小泉 のん",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_koizumi_non",
     "profile": {
@@ -273,16 +302,19 @@
       "bloodType": "A型",
       "hobbies": "作詞、文章創作、自己プロデュース、≠MEの曲を聴くこと",
       "skills": "500円玉を目に挟むこと、夢のために努力すること",
-      "pastAchievements": "",
+      "pastAchievements": "Popteen専属モデル",
       "enthusiasm": "モデル活動の経験を持ち、グループの歩みを尊重しながら新しい力になりたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "モデル"
+    ]
   },
   {
     "id": "cand_1bf0082f1d9b",
     "name": "佐藤 涼風",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_sato_suzuka",
     "profile": {
@@ -293,16 +325,21 @@
       "bloodType": "B型",
       "hobbies": "ゲーム、音楽鑑賞、御朱印集め、サウナ、温泉",
       "skills": "歌、散歩",
-      "pastAchievements": "",
+      "pastAchievements": "天照 / OUT OF 48/ UNLAME / Peel the apple",
       "enthusiasm": "≠MEの楽曲に励まされ、今度は自分のパフォーマンスで思いを届けたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "アイドル",
+      "オーディション番組",
+      "音楽・パフォーマンス"
+    ]
   },
   {
     "id": "cand_cd8e5ef5bcac",
     "name": "柴田 みつる",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_shibata_mitsuru",
     "profile": {
@@ -317,12 +354,13 @@
       "enthusiasm": "グループの歴史を大切にしながら成長し、パフォーマンスで魅力を伝えたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_a4e7e8934fad",
     "name": "白石 美空",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_shiraishi_misora",
     "profile": {
@@ -337,12 +375,13 @@
       "enthusiasm": "バレエやチアダンスの経験を生かし、自分ならではの表現を見つけたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_05cad8198c49",
     "name": "鈴木 麗衣",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_suzuki_rii",
     "profile": {
@@ -353,16 +392,19 @@
       "bloodType": "B型",
       "hobbies": "編み物、かわいい小物や植物の写真を撮ること",
       "skills": "耳を動かせること",
-      "pastAchievements": "",
+      "pastAchievements": "劇団四季『アナと雪の女王』ヤングエルサ",
       "enthusiasm": "歌とダンスが好きで、努力を重ねて心に残るメンバーを目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "ミュージカル・舞台"
+    ]
   },
   {
     "id": "cand_5ea03e5b1e95",
     "name": "徳永 心葉",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_tokunaga_konoha",
     "profile": {
@@ -373,16 +415,19 @@
       "bloodType": "不明",
       "hobbies": "旅行、おしゃべり",
       "skills": "歌、腕相撲",
-      "pastAchievements": "",
+      "pastAchievements": "ミスワールドジャパン2025　ファイナリスト",
       "enthusiasm": "歌とダンスの経験を生かし、自分らしい笑顔で人の心を動かしたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "コンテスト"
+    ]
   },
   {
     "id": "cand_d69bfc821f84",
     "name": "中村 釉香",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_nakamura_yuka",
     "profile": {
@@ -393,16 +438,20 @@
       "bloodType": "A型",
       "hobbies": "ミュージカルの曲を歌うこと、食べること",
       "skills": "料理、掃除、洗濯",
-      "pastAchievements": "",
+      "pastAchievements": "OUT OF 48 / UNLAME",
       "enthusiasm": "歌と踊りへの思いを胸に、≠MEと同じステージに立つ夢を目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "オーディション番組",
+      "音楽・パフォーマンス"
+    ]
   },
   {
     "id": "cand_b3e983d16f2e",
     "name": "那須 咲月",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_nasu_satsuki",
     "profile": {
@@ -417,12 +466,13 @@
       "enthusiasm": "次の審査へ進めたことに感謝し、自分らしく最後まで挑むと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_91dcf3b8af63",
     "name": "成石 亜里紗",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_naruishi_arisa",
     "profile": {
@@ -433,16 +483,20 @@
       "bloodType": "A型",
       "hobbies": "舞台観劇、かわいいアイドルを見ること",
       "skills": "回った後に真っ直ぐ歩けること、歌",
-      "pastAchievements": "",
+      "pastAchievements": "ミュージカル/ OUT OF 48",
       "enthusiasm": "ミュージカル経験を生かし、誰かの背中を押せる存在を目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "ミュージカル・舞台",
+      "オーディション番組"
+    ]
   },
   {
     "id": "cand_99bc1735b6ab",
     "name": "林 美澪",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_hayashi_mirei",
     "profile": {
@@ -453,16 +507,20 @@
       "bloodType": "O型",
       "hobbies": "音楽鑑賞、言語の勉強",
       "skills": "パフォーマンスでの表現、表情管理",
-      "pastAchievements": "",
+      "pastAchievements": "SKE４８/Seventeen専属モデル",
       "enthusiasm": "長年のダンスとアイドル活動の経験を生かし、初心を忘れず貢献したいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "アイドル",
+      "モデル"
+    ]
   },
   {
     "id": "cand_71426cc6565f",
     "name": "樋口 美沙",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_higuchi_misa",
     "profile": {
@@ -473,16 +531,19 @@
       "bloodType": "O型",
       "hobbies": "編み物",
       "skills": "ダンス、アクロバット、バレーボール",
-      "pastAchievements": "",
+      "pastAchievements": "プロダンサー・振付スタッフ",
       "enthusiasm": "チアやダンス、アイドルのサポート経験を生かし、自ら表現する側を目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "ダンス・振付"
+    ]
   },
   {
     "id": "cand_a4e306a16ba3",
     "name": "日野 美羽",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_hino_mihane",
     "profile": {
@@ -493,16 +554,19 @@
       "bloodType": "B型",
       "hobbies": "読書、かき氷巡り、≠ME楽曲のイントロ当て",
       "skills": "ダンス、お菓子作り",
-      "pastAchievements": "",
+      "pastAchievements": "2020ミスティーンジャパン　準グランプリ",
       "enthusiasm": "結成当時からのファンとして、グループへの思いと高身長を生かしたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "コンテスト"
+    ]
   },
   {
     "id": "cand_f638a4e4bb1f",
     "name": "宮内 菜々美",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_miyauchi_nanami",
     "profile": {
@@ -517,12 +581,13 @@
       "enthusiasm": "笑顔や元気を届け、応援してよかったと思ってもらえるアイドルを目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_2fc529ed5fff",
     "name": "宮野 陽菜",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_miyano_hina",
     "profile": {
@@ -537,12 +602,13 @@
       "enthusiasm": "明るく全力で取り組み、ライブで感じた感動を届けたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_9d8067eb549f",
     "name": "森 真梨子",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_mori_mariko",
     "profile": {
@@ -557,12 +623,13 @@
       "enthusiasm": "幼い頃からのアイドルになる夢を、≠MEで叶えたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_0182dfa5a89b",
     "name": "矢野 咲香",
-    "team": "",
+    "team": "WHITE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_yano_sayaka",
     "profile": {
@@ -577,12 +644,13 @@
       "enthusiasm": "小学生から続けたダンスを武器に、全力の歌と踊りで感動を届けたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_ce1756f678a4",
     "name": "横山 結愛",
-    "team": "",
+    "team": "BLACK",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_yokoyama_yuua",
     "profile": {
@@ -597,12 +665,13 @@
       "enthusiasm": "歌とダンスの経験を出し切り、後悔のないよう挑戦したいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_927b7afcf69b",
     "name": "吉野 心春",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_yoshino_koharu",
     "profile": {
@@ -617,12 +686,13 @@
       "enthusiasm": "自分らしい表現を見つけ、人に元気と勇気を届けられる存在を目指す。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": []
   },
   {
     "id": "cand_5a8caf5fef3d",
     "name": "羅瑞婷",
-    "team": "",
+    "team": "BLUE",
     "imageUrl": "",
     "officialUrl": "https://not-equal-me.jp/pages/specialsite_lo_juiting",
     "profile": {
@@ -633,10 +703,15 @@
       "bloodType": "A型",
       "hobbies": "ダンス、パン作り、動画編集、語学学習、アニメ鑑賞",
       "skills": "歌、作詞作曲、弾き語り、5か国語、人のMBTIを当てること",
-      "pastAchievements": "",
+      "pastAchievements": "TPE４８/　福岡ソフトバンクホークスHoneys",
       "enthusiasm": "台湾でのアイドル活動などを生かし、日本と台湾の懸け橋になりたいと語る。"
     },
     "screenings": [],
-    "statements": []
+    "statements": [],
+    "activityGenres": [
+      "アイドル",
+      "ダンス・パフォーマンス"
+    ]
   }
 ]
+
