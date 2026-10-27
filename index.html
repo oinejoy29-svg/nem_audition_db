@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2ed">
+  <meta name="description" content="≠ME『名無しのシンデレラ』候補者情報を整理する非公式ファンサイトです。">
+  <title>名無しのシンデレラ｜候補者データベース</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="トップページ">
+        <span class="brand-kicker">≠ME FAN DATABASE</span>
+        <span class="brand-title">名無しのシンデレラ</span>
+      </a>
+      <span class="unofficial-label">非公式ファンサイト</span>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro" aria-label="サイトについて">
+      <p>『名無しのシンデレラ』候補者の公開情報を整理するファン制作のデータベースです。</p>
+      <p class="notice">※公式運営とは無関係です。掲載情報・画像の権利は各権利者に帰属します。</p>
+    </section>
+
+    <section id="list-view" aria-labelledby="list-heading">
+      <div class="list-toolbar">
+        <div>
+          <p class="eyebrow">CANDIDATES</p>
+          <h1 id="list-heading">候補者一覧</h1>
+        </div>
+        <label class="sort-control">
+          <span>並び替え</span>
+          <select id="sort-select">
+            <option value="default">初期順</option>
+            <option value="overall">総合いいね順</option>
+            <option value="singing">歌唱いいね順</option>
+            <option value="performance">パフォーマンスいいね順</option>
+            <option value="favorite">お気に入り順</option>
+          </select>
+        </label>
+      </div>
+      <p id="list-status" class="status-line" aria-live="polite"></p>
+      <div id="candidate-grid" class="candidate-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <span class="empty-mark">✳</span>
+        <h2>候補者データはまだ登録されていません</h2>
+        <p>公式プロフィールを確認し、<code>data/candidates.json</code> に登録すると一覧に表示されます。</p>
+      </div>
+    </section>
+
+    <section id="detail-view" class="detail-view" hidden aria-live="polite">
+      <button id="back-button" class="back-button" type="button">← 候補者一覧に戻る</button>
+      <div id="detail-content"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>UNOFFICIAL FAN-MADE DATABASE</p>
+    <p>公開情報をもとに作成した非公式サイトです。</p>
+  </footer>
+</body>
+</html>
