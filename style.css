@@ -248,3 +248,31 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   }
 }
 
+
+/* 活動歴ジャンル別タグ */
+.activity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.activity-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  color: #292929;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .activity-tag {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
