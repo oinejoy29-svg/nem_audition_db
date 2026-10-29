@@ -276,3 +276,47 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   }
 }
 
+/* 2026-10: チーム別表示・比較カード・プロフィール改修 */
+.list-filters { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
+.filter-control { display:flex; align-items:center; gap:9px; color:var(--muted); font-size:12px; }
+.filter-control select { border:1px solid var(--line); border-radius:10px; background:var(--surface); padding:9px 12px; color:var(--ink); max-width:100%; }
+.members-toggle { display:inline-flex; align-items:center; gap:7px; font-size:12px; color:var(--ink); cursor:pointer; }
+.members-toggle input { accent-color:var(--accent); width:16px; height:16px; }
+.team-groups { display:grid; gap:22px; padding-bottom:54px; }
+.team-group { border:3px solid var(--team-color,var(--line)); border-radius:20px; padding:18px; background:rgba(255,253,249,.7); min-width:0; }
+.team-group-title { display:flex; align-items:baseline; gap:10px; font-size:21px; margin:0 0 16px; letter-spacing:.07em; }
+.team-group-title span { font-size:11px; color:var(--muted); font-weight:400; letter-spacing:0; }
+.team-card-grid { padding-bottom:0; }
+.candidate-name-line { display:flex; flex-wrap:wrap; align-items:baseline; gap:2px; }
+.candidate-name { display:inline; }
+.candidate-age { color:var(--muted); font-size:11px; font-weight:400; white-space:nowrap; }
+.card-actions { justify-content:flex-end; padding-top:0; }
+.member-card { --team-color:#b9b4ac; border:2px dashed #b9b4ac; background:#efede8; }
+.member-card:hover { transform:none; box-shadow:none; }
+.member-card .card-copy { padding-bottom:12px; }
+.member-label { display:inline-block; color:#67645d; font-size:10px; margin-bottom:6px; font-weight:600; }
+.member-height { display:block; font-size:10px; color:var(--muted); margin-top:5px; }
+.profile-title-row { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap; }
+.profile-title-row h1 { display:flex; flex-wrap:wrap; align-items:baseline; gap:5px; margin:0; }
+.profile-title-row h1 .candidate-age { font-size:clamp(13px,2vw,17px); }
+.profile-task-meta { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:12px 20px; }
+.profile-task-meta > div { display:flex; flex-direction:column; gap:5px; min-width:90px; max-width:210px; }
+.profile-task-meta span { font-size:10px; color:var(--muted); }
+.profile-task-meta strong { font-size:13px; line-height:1.6; overflow-wrap:anywhere; }
+.match-note { font-size:11px; color:#567c93; margin-top:5px; }
+.memo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.memo-title { display:block; font-weight:700; font-size:14px; margin-bottom:9px; }
+.memo-textarea { min-height:190px; }
+@media(max-width:600px) {
+  .list-filters { align-items:flex-start; flex-direction:column; gap:12px; }
+  .filter-control { width:100%; justify-content:space-between; }
+  .filter-control select { flex:1; max-width:75%; }
+  .team-group { padding:11px; border-width:2px; border-radius:14px; }
+  .team-group-title { font-size:17px; margin-bottom:11px; }
+  .candidate-age { font-size:10px; }
+  .profile-title-row { flex-direction:column; gap:13px; }
+  .profile-task-meta { justify-content:flex-start; width:100%; gap:12px; }
+  .profile-task-meta > div { min-width:calc(50% - 8px); max-width:none; }
+  .memo-grid { grid-template-columns:1fr; }
+}
+
