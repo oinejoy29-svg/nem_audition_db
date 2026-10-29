@@ -676,3 +676,14 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 }
 
 
+/* ========================================
+   ≠MEメンバーカード
+======================================== */
+
+.candidate-card.reference-card {
+  background-color: #D2FFF8;
+  border: 1px solid #79CCC0;
+  border-style: solid;
+}
+
+
