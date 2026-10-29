@@ -3,7 +3,7 @@
 
   const DATA_URL = "./data/candidates.json";
   const STORAGE_KEY = "nem_audition_db_personal_v1";
-  const TEAM_ORDER = { WHITE: 0, BLACK: 1, BLUE: 2 };
+  const TEAM_ORDER = { WHITE: 0, BLUE: 1, BLACK: 2 };
   const TEAM_COLORS = { WHITE: "#c5bda9", BLACK: "#333431", BLUE: "#7c9db9" };
   const LIKE_TYPES = [
     { key: "overall", label: "総合" },
@@ -180,14 +180,24 @@
     return `<button class="tab-button" type="button" role="tab" data-tab="${key}" aria-selected="${activeTab === key}">${label}</button>`;
   }
 
-  function activityMarkup(candidate) {
-  const profile = candidate.profile || {};
-  const history = profile.pastAchievements || "";
 
-  const activities = String(history)
-    .split(/[\/／]/)
-    .map(item => item.trim())
-    .filter(Boolean);
+const ACTIVITY_GENRE_COLORS = {
+  "アイドル": "#f9dce7",
+  "アイドル練習生": "#fce8ef",
+  "モデル": "#e5dcf8",
+  "ミュージカル・舞台": "#ffe2c7",
+  "子役・俳優": "#f9e9bd",
+  "ダンス・振付": "#d9e9fb",
+  "芸能スクール": "#d6eee4",
+  "オーディション番組": "#f9e9a8",
+  "オーディション": "#fff0cc",
+  "コンテスト": "#e4dff9",
+  "SNS・クリエイター": "#d9f0f2",
+  "芸能事務所": "#e8e8e8"
+};
+
+function activityMarkup(candidate) {
+  const activities = candidate.activityHistory || [];
 
   if (!activities.length) return "";
 
@@ -195,13 +205,25 @@
     <section class="info-section">
       <h3>活動歴</h3>
       <div class="activity-tags">
-        ${activities.map(item => `
-          <span class="activity-tag">${escapeHTML(item)}</span>
-        `).join("")}
+        ${activities.map(activity => {
+          const color =
+            ACTIVITY_GENRE_COLORS[activity.genre] || "#eeeeee";
+
+          return `
+            <span
+              class="activity-tag"
+              style="background-color:${color}"
+              title="${escapeHTML(activity.genre)}"
+            >
+              ${escapeHTML(activity.name)}
+            </span>
+          `;
+        }).join("")}
       </div>
     </section>
   `;
 }
+
   function profilePanel(candidate) {
     const profile = candidate.profile || {};
     const officialUrl = safeUrl(candidate.officialUrl);
