@@ -13,12 +13,20 @@
       "bloodType": "O型",
       "hobbies": "ゲーム、FPS（Overwatch 2）",
       "skills": "ベースギター",
-      "pastAchievements": "",
+      "pastAchievements": "韓国アイドル練習生",
       "enthusiasm": "音楽の仕事を目指して来日し、≠MEの音楽に惹かれて挑戦。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "アイドル練習生"
+    ],
+    "activityHistory": [
+      {
+        "name": "韓国アイドル練習生",
+        "genre": "アイドル練習生"
+      }
+    ]
   },
   {
     "id": "cand_e0dffa0e7b05",
@@ -34,12 +42,20 @@
       "bloodType": "B型",
       "hobbies": "TikTok撮影",
       "skills": "ダンス",
-      "pastAchievements": "",
+      "pastAchievements": "TikTokクリエイター（フォロワー50万人超）",
       "enthusiasm": "パフォーマンスを通じて笑顔と元気を届けたいと語る。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "SNS・クリエイター"
+    ],
+    "activityHistory": [
+      {
+        "name": "TikTokクリエイター（フォロワー50万人超）",
+        "genre": "SNS・クリエイター"
+      }
+    ]
   },
   {
     "id": "cand_b54a10e247fb",
@@ -55,7 +71,7 @@
       "bloodType": "O型",
       "hobbies": "カメラ",
       "skills": "ら行言葉、素早くバンジージャンプを飛ぶ",
-      "pastAchievements": "元STU48/アクターズスクール広島",
+      "pastAchievements": "STU48 / アクターズスクール広島",
       "enthusiasm": "これまでのグループの歴史を尊重し、将来はグループを引っ張れる存在を目指す。"
     },
     "screenings": [],
@@ -63,6 +79,16 @@
     "activityGenres": [
       "アイドル",
       "芸能スクール"
+    ],
+    "activityHistory": [
+      {
+        "name": "STU48",
+        "genre": "アイドル"
+      },
+      {
+        "name": "アクターズスクール広島",
+        "genre": "芸能スクール"
+      }
     ]
   },
   {
@@ -86,6 +112,12 @@
     "statements": [],
     "activityGenres": [
       "アイドル"
+    ],
+    "activityHistory": [
+      {
+        "name": "虹のコンキスタドール",
+        "genre": "アイドル"
+      }
     ]
   },
   {
@@ -102,12 +134,20 @@
       "bloodType": "O型",
       "hobbies": "お部屋のおかたづけ",
       "skills": "人より汗をあまりかかないこと",
-      "pastAchievements": "",
+      "pastAchievements": "おーらびっと",
       "enthusiasm": "唯一無二の個性を加え、ほかのメンバーも輝かせられる存在を目指す。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "アイドル"
+    ],
+    "activityHistory": [
+      {
+        "name": "おーらびっと",
+        "genre": "アイドル"
+      }
+    ]
   },
   {
     "id": "cand_fbbb039e369c",
@@ -123,14 +163,29 @@
       "bloodType": "B型",
       "hobbies": "脱出ゲーム、謎解き",
       "skills": "ジャズダンス",
-      "pastAchievements": "子役　ミュージカル出演",
+      "pastAchievements": "子役 / ミュージカル出演 / MAD MEDiCiNE",
       "enthusiasm": "幼少期からの歌やダンスの経験を生かし、元気を届けたいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
-      "子役",
-      "ミュージカル・舞台"
+      "子役・俳優",
+      "ミュージカル・舞台",
+      "アイドル"
+    ],
+    "activityHistory": [
+      {
+        "name": "子役",
+        "genre": "子役・俳優"
+      },
+      {
+        "name": "ミュージカル出演",
+        "genre": "ミュージカル・舞台"
+      },
+      {
+        "name": "MAD MEDiCiNE",
+        "genre": "アイドル"
+      }
     ]
   },
   {
@@ -147,14 +202,29 @@
       "bloodType": "O型",
       "hobbies": "散歩、愛犬たちと遊ぶこと",
       "skills": "一度会った人や通った道を忘れない、ご飯を美味しそうに食べる",
-      "pastAchievements": "PRODUCE　101 JAPAN / Nu FEEL",
+      "pastAchievements": "PRODUCE 101 JAPAN THE GIRLS / Nü FEEL. / Onephony新メンバーオーディション",
       "enthusiasm": "長年のダンス経験と継続力を生かしてグループに貢献したいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "オーディション番組",
-      "音楽・パフォーマンス"
+      "アイドル",
+      "オーディション"
+    ],
+    "activityHistory": [
+      {
+        "name": "PRODUCE 101 JAPAN THE GIRLS",
+        "genre": "オーディション番組"
+      },
+      {
+        "name": "Nü FEEL.",
+        "genre": "アイドル"
+      },
+      {
+        "name": "Onephony新メンバーオーディション",
+        "genre": "オーディション"
+      }
     ]
   },
   {
@@ -171,13 +241,19 @@
       "bloodType": "A型",
       "hobbies": "ディズニー関連、お笑い鑑賞、ゲーム、カフェラテ",
       "skills": "ダンス、歌、ディズニーのモノマネ、ポジティブでいること",
-      "pastAchievements": "EXPG STUDIO　TOKYO",
+      "pastAchievements": "EXPG STUDIO TOKYO",
       "enthusiasm": "幼い頃から続けたダンスと歌を生かし、応援されるアイドルを目指す。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "芸能スクール"
+    ],
+    "activityHistory": [
+      {
+        "name": "EXPG STUDIO TOKYO",
+        "genre": "芸能スクール"
+      }
     ]
   },
   {
@@ -199,7 +275,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_3bc72606f784",
@@ -220,7 +297,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_e5a69bc3e13c",
@@ -236,14 +314,23 @@
       "bloodType": "A型",
       "hobbies": "アニメ鑑賞、散歩",
       "skills": "片手ロンダート、早食い、人の変化にすぐ気づく",
-      "pastAchievements": "元NMB48　NARLOW",
+      "pastAchievements": "NMB48 / NARLOW",
       "enthusiasm": "今回の挑戦に全力を注ぎ、後悔のないよう表現したいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
-      "アイドル",
-      "音楽・パフォーマンス"
+      "アイドル"
+    ],
+    "activityHistory": [
+      {
+        "name": "NMB48",
+        "genre": "アイドル"
+      },
+      {
+        "name": "NARLOW",
+        "genre": "アイドル"
+      }
     ]
   },
   {
@@ -260,12 +347,25 @@
       "bloodType": "A型",
       "hobbies": "食べること、粘土造り",
       "skills": "反復横跳び、がむしゃらに頑張れること",
-      "pastAchievements": "",
+      "pastAchievements": "フェアリー・ダンサーズ / BABY BUBBLE",
       "enthusiasm": "成長意欲を生かし、東京ドームに立つ日まで努力したいと語る。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "ダンス・振付",
+      "アイドル"
+    ],
+    "activityHistory": [
+      {
+        "name": "フェアリー・ダンサーズ",
+        "genre": "ダンス・振付"
+      },
+      {
+        "name": "BABY BUBBLE",
+        "genre": "アイドル"
+      }
+    ]
   },
   {
     "id": "cand_5db72e75cd5d",
@@ -286,7 +386,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_e569bdc85eaa",
@@ -302,13 +403,24 @@
       "bloodType": "A型",
       "hobbies": "作詞、文章創作、自己プロデュース、≠MEの曲を聴くこと",
       "skills": "500円玉を目に挟むこと、夢のために努力すること",
-      "pastAchievements": "Popteen専属モデル",
+      "pastAchievements": "オスカープロモーション所属 / Popteen専属モデル",
       "enthusiasm": "モデル活動の経験を持ち、グループの歩みを尊重しながら新しい力になりたいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
+      "芸能事務所",
       "モデル"
+    ],
+    "activityHistory": [
+      {
+        "name": "オスカープロモーション所属",
+        "genre": "芸能事務所"
+      },
+      {
+        "name": "Popteen専属モデル",
+        "genre": "モデル"
+      }
     ]
   },
   {
@@ -325,15 +437,32 @@
       "bloodType": "B型",
       "hobbies": "ゲーム、音楽鑑賞、御朱印集め、サウナ、温泉",
       "skills": "歌、散歩",
-      "pastAchievements": "天照 / OUT OF 48/ UNLAME / Peel the apple",
+      "pastAchievements": "天照 / OUT OF 48 / UNLAME / Peel the Apple",
       "enthusiasm": "≠MEの楽曲に励まされ、今度は自分のパフォーマンスで思いを届けたいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "アイドル",
-      "オーディション番組",
-      "音楽・パフォーマンス"
+      "オーディション番組"
+    ],
+    "activityHistory": [
+      {
+        "name": "天照",
+        "genre": "アイドル"
+      },
+      {
+        "name": "OUT OF 48",
+        "genre": "オーディション番組"
+      },
+      {
+        "name": "UNLAME",
+        "genre": "アイドル"
+      },
+      {
+        "name": "Peel the Apple",
+        "genre": "アイドル"
+      }
     ]
   },
   {
@@ -350,12 +479,20 @@
       "bloodType": "A型",
       "hobbies": "ガチャガチャ、ハンドメイド、散歩",
       "skills": "似顔絵、ハンドメイド、着物を着ること",
-      "pastAchievements": "",
+      "pastAchievements": "G-project（カバーダンスチーム）",
       "enthusiasm": "グループの歴史を大切にしながら成長し、パフォーマンスで魅力を伝えたいと語る。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "ダンス・振付"
+    ],
+    "activityHistory": [
+      {
+        "name": "G-project（カバーダンスチーム）",
+        "genre": "ダンス・振付"
+      }
+    ]
   },
   {
     "id": "cand_a4e7e8934fad",
@@ -371,12 +508,20 @@
       "bloodType": "O型",
       "hobbies": "≠MEの曲を聴くこと、友達とおしゃべり",
       "skills": "誰とでもすぐ打ち解ける、マシンガントーク",
-      "pastAchievements": "",
+      "pastAchievements": "BLACK & WHITE オーディション",
       "enthusiasm": "バレエやチアダンスの経験を生かし、自分ならではの表現を見つけたいと語る。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "オーディション"
+    ],
+    "activityHistory": [
+      {
+        "name": "BLACK & WHITE オーディション",
+        "genre": "オーディション"
+      }
+    ]
   },
   {
     "id": "cand_05cad8198c49",
@@ -392,13 +537,19 @@
       "bloodType": "B型",
       "hobbies": "編み物、かわいい小物や植物の写真を撮ること",
       "skills": "耳を動かせること",
-      "pastAchievements": "劇団四季『アナと雪の女王』ヤングエルサ",
+      "pastAchievements": "劇団四季『アナと雪の女王』ヤングエルサ役",
       "enthusiasm": "歌とダンスが好きで、努力を重ねて心に残るメンバーを目指す。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "ミュージカル・舞台"
+    ],
+    "activityHistory": [
+      {
+        "name": "劇団四季『アナと雪の女王』ヤングエルサ役",
+        "genre": "ミュージカル・舞台"
+      }
     ]
   },
   {
@@ -415,13 +566,19 @@
       "bloodType": "不明",
       "hobbies": "旅行、おしゃべり",
       "skills": "歌、腕相撲",
-      "pastAchievements": "ミスワールドジャパン2025　ファイナリスト",
+      "pastAchievements": "ミス・ワールド・ジャパン2025 ファイナリスト",
       "enthusiasm": "歌とダンスの経験を生かし、自分らしい笑顔で人の心を動かしたいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "コンテスト"
+    ],
+    "activityHistory": [
+      {
+        "name": "ミス・ワールド・ジャパン2025 ファイナリスト",
+        "genre": "コンテスト"
+      }
     ]
   },
   {
@@ -438,14 +595,29 @@
       "bloodType": "A型",
       "hobbies": "ミュージカルの曲を歌うこと、食べること",
       "skills": "料理、掃除、洗濯",
-      "pastAchievements": "OUT OF 48 / UNLAME",
+      "pastAchievements": "OUT OF 48 / UNLAME / ミスマガジン2027 ベスト20",
       "enthusiasm": "歌と踊りへの思いを胸に、≠MEと同じステージに立つ夢を目指す。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "オーディション番組",
-      "音楽・パフォーマンス"
+      "アイドル",
+      "コンテスト"
+    ],
+    "activityHistory": [
+      {
+        "name": "OUT OF 48",
+        "genre": "オーディション番組"
+      },
+      {
+        "name": "UNLAME",
+        "genre": "アイドル"
+      },
+      {
+        "name": "ミスマガジン2027 ベスト20",
+        "genre": "コンテスト"
+      }
     ]
   },
   {
@@ -467,7 +639,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_91dcf3b8af63",
@@ -483,14 +656,29 @@
       "bloodType": "A型",
       "hobbies": "舞台観劇、かわいいアイドルを見ること",
       "skills": "回った後に真っ直ぐ歩けること、歌",
-      "pastAchievements": "ミュージカル/ OUT OF 48",
+      "pastAchievements": "ミュージカル出演 / OUT OF 48 / 令和のギャルルオーディション",
       "enthusiasm": "ミュージカル経験を生かし、誰かの背中を押せる存在を目指す。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "ミュージカル・舞台",
-      "オーディション番組"
+      "オーディション番組",
+      "オーディション"
+    ],
+    "activityHistory": [
+      {
+        "name": "ミュージカル出演",
+        "genre": "ミュージカル・舞台"
+      },
+      {
+        "name": "OUT OF 48",
+        "genre": "オーディション番組"
+      },
+      {
+        "name": "令和のギャルルオーディション",
+        "genre": "オーディション"
+      }
     ]
   },
   {
@@ -507,7 +695,7 @@
       "bloodType": "O型",
       "hobbies": "音楽鑑賞、言語の勉強",
       "skills": "パフォーマンスでの表現、表情管理",
-      "pastAchievements": "SKE４８/Seventeen専属モデル",
+      "pastAchievements": "SKE48 / Seventeen専属モデル",
       "enthusiasm": "長年のダンスとアイドル活動の経験を生かし、初心を忘れず貢献したいと語る。"
     },
     "screenings": [],
@@ -515,6 +703,16 @@
     "activityGenres": [
       "アイドル",
       "モデル"
+    ],
+    "activityHistory": [
+      {
+        "name": "SKE48",
+        "genre": "アイドル"
+      },
+      {
+        "name": "Seventeen専属モデル",
+        "genre": "モデル"
+      }
     ]
   },
   {
@@ -531,13 +729,23 @@
       "bloodType": "O型",
       "hobbies": "編み物",
       "skills": "ダンス、アクロバット、バレーボール",
-      "pastAchievements": "プロダンサー・振付スタッフ",
+      "pastAchievements": "プロダンサー・振付スタッフ / INFINITY",
       "enthusiasm": "チアやダンス、アイドルのサポート経験を生かし、自ら表現する側を目指す。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "ダンス・振付"
+    ],
+    "activityHistory": [
+      {
+        "name": "プロダンサー・振付スタッフ",
+        "genre": "ダンス・振付"
+      },
+      {
+        "name": "INFINITY",
+        "genre": "ダンス・振付"
+      }
     ]
   },
   {
@@ -554,13 +762,19 @@
       "bloodType": "B型",
       "hobbies": "読書、かき氷巡り、≠ME楽曲のイントロ当て",
       "skills": "ダンス、お菓子作り",
-      "pastAchievements": "2020ミスティーンジャパン　準グランプリ",
+      "pastAchievements": "ミス・ティーン・ジャパン2020 準グランプリ",
       "enthusiasm": "結成当時からのファンとして、グループへの思いと高身長を生かしたいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "コンテスト"
+    ],
+    "activityHistory": [
+      {
+        "name": "ミス・ティーン・ジャパン2020 準グランプリ",
+        "genre": "コンテスト"
+      }
     ]
   },
   {
@@ -577,12 +791,20 @@
       "bloodType": "A型",
       "hobbies": "メイク、バレーボール",
       "skills": "ギター、ダンス",
-      "pastAchievements": "",
+      "pastAchievements": "高一ミスコン2025",
       "enthusiasm": "笑顔や元気を届け、応援してよかったと思ってもらえるアイドルを目指す。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "コンテスト"
+    ],
+    "activityHistory": [
+      {
+        "name": "高一ミスコン2025",
+        "genre": "コンテスト"
+      }
+    ]
   },
   {
     "id": "cand_2fc529ed5fff",
@@ -598,12 +820,20 @@
       "bloodType": "O型",
       "hobbies": "しゃべること、歌、ダンス",
       "skills": "ポジティブシンキング、小指の短さ",
-      "pastAchievements": "",
+      "pastAchievements": "CoCoRo学園",
       "enthusiasm": "明るく全力で取り組み、ライブで感じた感動を届けたいと語る。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "アイドル"
+    ],
+    "activityHistory": [
+      {
+        "name": "CoCoRo学園",
+        "genre": "アイドル"
+      }
+    ]
   },
   {
     "id": "cand_9d8067eb549f",
@@ -624,7 +854,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_0182dfa5a89b",
@@ -640,12 +871,20 @@
       "bloodType": "B型",
       "hobbies": "ダンス、はちみつとおまんじゅうを毎日食べること",
       "skills": "ダンス、ピアノ",
-      "pastAchievements": "",
+      "pastAchievements": "ハロプロ研修生",
       "enthusiasm": "小学生から続けたダンスを武器に、全力の歌と踊りで感動を届けたいと語る。"
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [
+      "アイドル練習生"
+    ],
+    "activityHistory": [
+      {
+        "name": "ハロプロ研修生",
+        "genre": "アイドル練習生"
+      }
+    ]
   },
   {
     "id": "cand_ce1756f678a4",
@@ -666,7 +905,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_927b7afcf69b",
@@ -687,7 +927,8 @@
     },
     "screenings": [],
     "statements": [],
-    "activityGenres": []
+    "activityGenres": [],
+    "activityHistory": []
   },
   {
     "id": "cand_5a8caf5fef3d",
@@ -703,15 +944,24 @@
       "bloodType": "A型",
       "hobbies": "ダンス、パン作り、動画編集、語学学習、アニメ鑑賞",
       "skills": "歌、作詞作曲、弾き語り、5か国語、人のMBTIを当てること",
-      "pastAchievements": "TPE４８/　福岡ソフトバンクホークスHoneys",
+      "pastAchievements": "TPE48 / 福岡ソフトバンクホークス Honeys",
       "enthusiasm": "台湾でのアイドル活動などを生かし、日本と台湾の懸け橋になりたいと語る。"
     },
     "screenings": [],
     "statements": [],
     "activityGenres": [
       "アイドル",
-      "ダンス・パフォーマンス"
+      "ダンス・振付"
+    ],
+    "activityHistory": [
+      {
+        "name": "TPE48",
+        "genre": "アイドル"
+      },
+      {
+        "name": "福岡ソフトバンクホークス Honeys",
+        "genre": "ダンス・振付"
+      }
     ]
   }
 ]
-
