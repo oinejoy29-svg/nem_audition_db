@@ -29,70 +29,102 @@
 
     <section id="list-view" aria-labelledby="list-heading">
 
+
 <div class="list-toolbar">
   <div>
     <p class="eyebrow">CANDIDATES</p>
     <h1 id="list-heading">候補者一覧</h1>
   </div>
-
-  <label class="sort-control">
-    <span>並び替え</span>
-    <select id="sort-select">
-      <option value="team">4次審査チーム別</option>
-      <option value="name">名前順</option>
-      <option value="age">年齢順（若い順）</option>
-      <option value="height">身長順（高い順）</option>
-    </select>
-  </label>
 </div>
 
-<div class="list-filters">
-  <label class="filter-control">
-    <span>自己評価で絞り込み</span>
-    <select id="filter-select">
-      <option value="all">すべて</option>
-      <option value="favorite">★ お気に入り</option>
-      <option value="overall">♡ 総合いいね</option>
-      <option value="singing">♡ 歌唱いいね</option>
-      <option value="performance">♡ パフォーマンスいいね</option>
-    </select>
-  </label>
+<div class="filter-panel">
 
-  <div class="profile-filter">
-    <span>プロフィールで絞り込み</span>
+  <div class="filter-panel-top">
 
-    <select id="origin-filter" aria-label="出身地">
-      <option value="all">出身地：すべて</option>
-    </select>
+    <label class="filter-field">
+      <span class="filter-label">並び替え</span>
+      <select id="sort-select">
+        <option value="team">4次審査チーム別</option>
+        <option value="name">名前順</option>
+        <option value="age">年齢順（若い順）</option>
+        <option value="height">身長順（高い順）</option>
+      </select>
+    </label>
 
-    <div class="age-filter">
-      <span>年齢</span>
-      <input
-        id="age-min"
-        type="number"
-        min="0"
-        max="120"
-        placeholder="下限"
-        aria-label="最低年齢"
-      >
-      <span>〜</span>
-      <input
-        id="age-max"
-        type="number"
-        min="0"
-        max="120"
-        placeholder="上限"
-        aria-label="最高年齢"
-      >
-      <span>歳</span>
+    <label class="filter-field">
+      <span class="filter-label">自己評価で絞り込み</span>
+      <select id="filter-select">
+        <option value="all">すべて</option>
+        <option value="favorite">★ お気に入り</option>
+        <option value="overall">♡ 総合いいね</option>
+        <option value="singing">♡ 歌唱いいね</option>
+        <option value="performance">♡ パフォーマンスいいね</option>
+      </select>
+    </label>
+
+  </div>
+
+  <div class="filter-divider"></div>
+
+  <div class="filter-profile">
+
+    <span class="filter-label">
+      プロフィールで絞り込み
+    </span>
+
+    <div class="filter-profile-fields">
+
+      <label class="filter-field">
+        <span class="filter-sublabel">出身地</span>
+        <select id="origin-filter">
+          <option value="all">すべて</option>
+        </select>
+      </label>
+
+      <div class="filter-field">
+        <span class="filter-sublabel">年齢</span>
+
+        <div class="filter-age-range">
+          <input
+            id="age-min"
+            type="number"
+            min="0"
+            max="120"
+            placeholder="下限"
+            aria-label="最低年齢"
+          >
+          <span>〜</span>
+          <input
+            id="age-max"
+            type="number"
+            min="0"
+            max="120"
+            placeholder="上限"
+            aria-label="最高年齢"
+          >
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <label id="members-toggle-wrap" class="members-toggle" hidden>
-    <input type="checkbox" id="show-members" checked>
+  <div class="filter-divider"></div>
+
+  <label
+    id="members-toggle-wrap"
+    class="members-toggle filter-members-toggle"
+    hidden
+  >
+    <input
+      type="checkbox"
+      id="show-members"
+      checked
+    >
     <span>≠MEメンバーを表示</span>
   </label>
+
 </div>
+
 
 
       <p id="list-status" class="status-line" aria-live="polite"></p>
