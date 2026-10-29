@@ -1,0 +1,91 @@
+
+[
+  {
+    "id": "ogi_hana",
+    "name": "尾木波菜",
+    "birthDate": "2003-05-08",
+    "birthplace": "千葉県",
+    "bloodType": "B型",
+    "height": 162.5
+  },
+  {
+    "id": "ochiai_kirari",
+    "name": "落合希来里",
+    "birthDate": "2001-05-22",
+    "birthplace": "栃木県",
+    "bloodType": "B型",
+    "height": 148.5
+  },
+  {
+    "id": "kanisawa_moeko",
+    "name": "蟹沢萌子",
+    "birthDate": "1999-10-25",
+    "birthplace": "神奈川県",
+    "bloodType": "B型",
+    "height": 163.4
+  },
+  {
+    "id": "kawaguchi_natsune",
+    "name": "河口夏音",
+    "birthDate": "2001-07-29",
+    "birthplace": "広島県",
+    "bloodType": "AB型",
+    "height": 165
+  },
+  {
+    "id": "kawanago_natsumi",
+    "name": "川中子奈月心",
+    "birthDate": "2005-09-26",
+    "birthplace": "東京都",
+    "bloodType": "A型",
+    "height": 163.7
+  },
+  {
+    "id": "sakurai_momo",
+    "name": "櫻井もも",
+    "birthDate": "2004-04-13",
+    "birthplace": "神奈川県",
+    "bloodType": "A型",
+    "height": 152.7
+  },
+  {
+    "id": "suzuki_hitomi",
+    "name": "鈴木瞳美",
+    "birthDate": "2001-04-13",
+    "birthplace": "東京都",
+    "bloodType": "B型",
+    "height": 159.5
+  },
+  {
+    "id": "tanizaki_saya",
+    "name": "谷崎早耶",
+    "birthDate": "1999-10-07",
+    "birthplace": "熊本県",
+    "bloodType": "B型",
+    "height": 161
+  },
+  {
+    "id": "tomita_nanaka",
+    "name": "冨田菜々風",
+    "birthDate": "2000-07-17",
+    "birthplace": "鹿児島県",
+    "bloodType": "A型",
+    "height": 162
+  },
+  {
+    "id": "nagata_shiori",
+    "name": "永田詩央里",
+    "birthDate": "2004-04-02",
+    "birthplace": "広島県",
+    "bloodType": "A型",
+    "height": 150.2
+  },
+  {
+    "id": "honda_miyuki",
+    "name": "本田珠由記",
+    "birthDate": "2004-02-27",
+    "birthplace": "栃木県",
+    "bloodType": "AB型",
+    "height": 153
+  }
+]
