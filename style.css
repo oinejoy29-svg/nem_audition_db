@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
 :root {
@@ -14,6 +15,7 @@
   --radius: 18px;
   font-family: "Noto Sans JP", system-ui, sans-serif;
 }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); }
@@ -42,22 +44,6 @@ h1 { font-size: clamp(25px, 4vw, 34px); letter-spacing: .04em; margin: 0; }
 .status-line { font-size: 11px; color: var(--muted); min-height: 16px; margin: 0 0 12px; }
 
 .candidate-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding-bottom: 54px; }
-.candidate-card { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
-.candidate-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,37,33,.07); }
-.card-open { display: block; width: 100%; border: 0; padding: 0; text-align: left; background: transparent; color: inherit; }
-.candidate-photo { aspect-ratio: 4 / 4.6; display: grid; place-items: center; background: #eae5dc; color: #8d877d; overflow: hidden; }
-.candidate-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.photo-placeholder { font: 500 11px/1.7 "Noto Sans JP", sans-serif; text-align: center; padding: 10px; }
-.card-copy { padding: 12px 12px 8px; }
-.team-label { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; color: var(--muted); margin-bottom: 6px; }
-.team-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--team-color, #bbb); }
-.candidate-name { display: block; font-size: 15px; line-height: 1.45; font-weight: 700; overflow-wrap: anywhere; }
-.card-actions { display: flex; justify-content: space-between; align-items: center; gap: 6px; padding: 2px 10px 12px; }
-.like-summary { display: flex; flex-wrap: wrap; gap: 4px; }
-.mini-like, .favorite-button { border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 999px; min-height: 29px; padding: 5px 7px; font-size: 10px; }
-.mini-like[aria-pressed="true"] { color: var(--accent); border-color: #d7a79f; background: #fff7f5; }
-.favorite-button { font-size: 17px; line-height: 1; min-width: 32px; padding: 4px 7px; }
-.favorite-button[aria-pressed="true"] { color: #b8872d; border-color: #d8c18f; background: #fffaf0; }
 
 .empty-state { text-align: center; border: 1px dashed #cfc7bb; border-radius: var(--radius); padding: 46px 20px; margin: 16px 0 56px; background: rgba(255,253,249,.5); }
 .empty-mark { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; font-size: 21px; color: var(--accent); }
@@ -67,12 +53,7 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 
 .detail-view { padding: 24px 0 60px; }
 .back-button { border: 1px solid var(--line); border-radius: 999px; background: var(--surface); padding: 10px 14px; font-size: 12px; margin-bottom: 22px; }
-.profile-heading { display: grid; grid-template-columns: minmax(180px, 280px) 1fr; gap: 28px; align-items: center; margin-bottom: 20px; }
-.profile-image { aspect-ratio: 4 / 4.5; overflow: hidden; border-radius: var(--radius); background: #eae5dc; display: grid; place-items: center; }
-.profile-image img { width: 100%; height: 100%; object-fit: cover; }
 .profile-meta h1 { font-size: clamp(28px, 5vw, 44px); margin: 10px 0; }
-.profile-reading { color: var(--muted); font-size: 13px; }
-.profile-basics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
 .basic-chip { border: 1px solid var(--line); background: var(--surface); padding: 7px 10px; border-radius: 999px; font-size: 11px; }
 .personal-panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin: 20px 0 22px; }
 .personal-panel h2 { font-size: 14px; margin: 0 0 12px; }
@@ -91,21 +72,94 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 .info-section { margin: 22px 0; }
 .info-section h3 { font-size: 14px; margin: 0 0 10px; }
 .external-link { color: #3e688b; font-size: 12px; overflow-wrap: anywhere; }
-.statement-list { display: grid; gap: 12px; }
 .statement { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
 .statement-speaker { font-weight: 700; font-size: 12px; margin-bottom: 7px; }
-.statement-context { font-size: 11px; color: var(--muted); margin-bottom: 10px; }
-.statement-quote { font-size: 13px; line-height: 1.9; white-space: pre-wrap; }
 .empty-panel { color: var(--muted); font-size: 13px; line-height: 1.8; padding: 24px; background: rgba(255,253,249,.6); border-radius: 14px; }
-.memo-textarea { display: block; width: 100%; min-height: 220px; resize: vertical; border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: var(--surface); color: var(--ink); font-size: 13px; line-height: 1.8; }
 .memo-help { font-size: 11px; color: var(--muted); line-height: 1.8; }
 .save-status { min-height: 18px; font-size: 11px; color: var(--muted); margin-top: 8px; }
 .site-footer { text-align: center; border-top: 1px solid var(--line); padding: 26px 20px 32px; color: var(--muted); font-size: 10px; line-height: 1.8; }
 .site-footer p { margin: 3px; }
 .site-footer p:first-child { letter-spacing: .16em; font-family: "Playfair Display", serif; }
 
+/* 一覧のフィルター */
+.list-filters { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+.filter-control { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
+.filter-control select { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 9px 12px; color: var(--ink); max-width: 100%; }
+.members-toggle { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; cursor: pointer; }
+.members-toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
+
+/* 候補者一覧：カード共通 */
+.candidate-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--surface);
+  border: 2px solid var(--team-color, var(--line));
+  border-radius: 13px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.candidate-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,37,33,.07); }
+.card-open { display: block; width: 100%; border: 0; padding: 0; text-align: left; background: transparent; color: inherit; }
+.candidate-card .card-copy { padding: 12px 11px 8px; }
+.team-label { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; color: var(--muted); margin-bottom: 5px; }
+.team-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--team-color, #bbb); }
+.candidate-name-row { display: flex; align-items: baseline; flex-wrap: nowrap; gap: 3px; min-width: 0; }
+.candidate-name-row .candidate-name { display: inline; min-width: 0; font-size: 15px; line-height: 1.5; font-weight: 700; overflow-wrap: anywhere; }
+.candidate-name-row .candidate-age { flex: 0 0 auto; color: var(--muted); font-size: 11px; font-weight: 400; white-space: nowrap; }
+.candidate-card .card-actions { display: flex; justify-content: flex-end; align-items: center; padding: 0 10px 10px; margin-top: auto; }
+.favorite-button { border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 999px; min-width: 32px; min-height: 29px; padding: 4px 7px; font-size: 17px; line-height: 1; }
+.favorite-button[aria-pressed="true"] { color: #b8872d; border-color: #d8c18f; background: #fffaf0; }
+
+/* 名前・年齢・身長順は通常のグリッド */
+#candidate-grid.mixed-list-container { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; padding-bottom: 54px; }
+
+/* チーム別表示 */
+#candidate-grid.team-list-container { display: block; padding-bottom: 54px; }
+.team-group { width: 100%; min-width: 0; margin-bottom: 22px; padding: 18px; border: 3px solid var(--team-color, var(--line)); border-radius: 18px; background: rgba(255,253,249,.7); }
+.team-group-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 15px; }
+.team-group-heading h2 { margin: 0; font-size: 21px; letter-spacing: .06em; }
+.team-group-heading > span { color: var(--muted); font-size: 12px; }
+.team-candidate-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; padding-bottom: 0; }
+
+/* ≠ME比較カード：候補者と同じ枠線幅・高さの扱い */
+.candidate-card.reference-card {
+  background: #e3f2ed;
+  border: 2px solid #79ccc0;
+}
+.reference-card:hover { transform: none; box-shadow: none; }
+.reference-label { display: block; color: #52766d; font-size: 10px; font-weight: 600; margin-bottom: 7px; }
+.reference-meta { margin-top: 5px; color: var(--muted); font-size: 11px; }
+
+/* 活動歴のジャンルタグ */
+.activity-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.activity-tag { display: inline-flex; align-items: center; padding: 7px 12px; border: 1px solid rgba(0,0,0,.07); border-radius: 999px; color: #292929; font-size: 12px; line-height: 1.5; font-weight: 500; }
+
+/* 個人詳細：左に名前、右にチームと課題曲 */
+.profile-heading { display: block; width: 100%; margin-bottom: 20px; }
+.profile-heading-layout { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; width: 100%; }
+.profile-heading .profile-meta { flex: 0 1 auto; min-width: 0; }
+.profile-name-row { display: flex; flex-wrap: nowrap; align-items: baseline; gap: 6px; }
+.profile-meta .profile-name-row h1 { margin: 0; font-size: clamp(25px, 3.2vw, 38px); line-height: 1.4; }
+.profile-name-row .candidate-age { flex-shrink: 0; color: var(--muted); font-size: 15px; font-weight: 400; white-space: nowrap; }
+.profile-basics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.profile-assignment { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: flex-end; gap: 12px 20px; margin-left: auto; }
+.assignment-item { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; min-width: 95px; max-width: 190px; }
+.assignment-item > span:first-child { color: var(--muted); font-size: 10px; line-height: 1.5; }
+.assignment-item strong { font-size: 12px; line-height: 1.5; font-weight: 600; overflow-wrap: anywhere; }
+.assignment-item .team-label { margin: 0; color: var(--ink); font-size: 12px; }
+
+/* メモ */
+.memo-group { margin-bottom: 18px; }
+.memo-heading { display: block; font-size: 14px; font-weight: 700; margin-bottom: 9px; }
+.memo-textarea { min-height: 190px; }
+
+/* レスポンシブ */
 @media (max-width: 850px) {
-  .candidate-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .candidate-grid, .team-candidate-grid, #candidate-grid.mixed-list-container { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .profile-heading-layout { flex-wrap: wrap; gap: 16px; }
+  .profile-assignment { justify-content: flex-start; margin-left: 0; }
 }
 @media (max-width: 600px) {
   .header-inner { padding: 14px 16px; }
@@ -113,577 +167,39 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   .unofficial-label { font-size: 10px; padding: 6px 8px; }
   .page-shell { width: calc(100% - 28px); }
   .intro { padding-top: 17px; font-size: 12px; }
-  .list-toolbar { align-items: start; flex-direction: column; gap: 14px; padding-top: 20px; }
+  .list-toolbar { align-items: flex-start; flex-direction: column; gap: 14px; padding-top: 20px; }
   .sort-control { width: 100%; justify-content: space-between; }
   .sort-control select { flex: 1; max-width: 65%; }
-  .candidate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .candidate-card { border-radius: 14px; }
-  .card-copy { padding: 10px 9px 7px; }
-  .candidate-name { font-size: 13px; }
-  .card-actions { padding: 2px 7px 9px; align-items: start; }
-  .like-summary { gap: 3px; }
-  .mini-like { min-height: 27px; padding: 4px 6px; font-size: 9px; }
+  .list-filters { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .filter-control { width: 100%; justify-content: space-between; }
+  .filter-control select { flex: 1; max-width: 75%; }
+  .candidate-grid, .team-candidate-grid, #candidate-grid.mixed-list-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .candidate-card { border-radius: 11px; }
+  .candidate-card .card-copy { padding: 10px 8px 7px; }
+  .candidate-name-row { gap: 2px; }
+  .candidate-name-row .candidate-name { font-size: 12px; }
+  .candidate-name-row .candidate-age { font-size: 10px; }
+  .candidate-card .card-actions { padding: 0 7px 9px; }
   .favorite-button { min-width: 28px; min-height: 27px; font-size: 15px; padding: 4px 6px; }
-  .profile-heading { grid-template-columns: 112px 1fr; gap: 14px; align-items: start; }
-  .profile-meta h1 { font-size: 26px; margin: 8px 0; }
-  .profile-reading { font-size: 11px; }
+  .reference-label { font-size: 9px; margin-bottom: 6px; }
+  .reference-meta { font-size: 10px; }
+  .team-group { padding: 10px; border-width: 2px; border-radius: 13px; margin-bottom: 16px; }
+  .team-group-heading { margin-bottom: 11px; }
+  .team-group-heading h2 { font-size: 17px; }
+  .profile-heading-layout { flex-direction: column; align-items: stretch; gap: 14px; }
+  .profile-meta .profile-name-row h1 { font-size: 25px; }
+  .profile-name-row .candidate-age { font-size: 13px; }
   .profile-basics { gap: 5px; margin-top: 10px; }
   .basic-chip { font-size: 10px; padding: 6px 8px; }
+  .profile-assignment { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: 100%; margin: 0; }
+  .assignment-item { min-width: 0; max-width: none; }
+  .assignment-item > span:first-child { font-size: 9px; }
+  .assignment-item strong, .assignment-item .team-label { font-size: 11px; }
+  .activity-tag { padding: 6px 10px; font-size: 11px; }
   .personal-panel { padding: 13px; }
   .evaluation-row { gap: 6px; }
   .eval-button { padding: 8px 9px; font-size: 11px; }
   .info-grid { grid-template-columns: 1fr; }
   .info-item { padding: 12px; }
 }
-
-/* ========================================
-   写真なし・コンパクトな候補者カード
-   ======================================== */
-
-/* カード全体 */
-.candidate-card {
-  border: 2px solid var(--team-color, var(--line));
-  border-radius: 13px;
-  overflow: hidden;
-  background: var(--surface);
-}
-
-/* 写真とプレースホルダーを非表示 */
-.candidate-card .candidate-photo,
-.profile-heading .profile-image {
-  display: none !important;
-}
-
-/* 候補者一覧のカード */
-.card-copy {
-  padding: 13px 12px 7px;
-}
-
-.candidate-name {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.team-label {
-  margin-bottom: 5px;
-  font-size: 10px;
-}
-
-/* いいね・お気に入り */
-.card-actions {
-  padding: 5px 10px 11px;
-  gap: 5px;
-}
-
-.like-summary {
-  gap: 4px;
-}
-
-.mini-like {
-  min-height: 27px;
-  padding: 4px 7px;
-}
-
-/* 個別ページ：写真なしで横幅を活用 */
-.profile-heading {
-  display: block;
-  margin-bottom: 18px;
-}
-
-.profile-meta h1 {
-  margin: 8px 0;
-}
-
-/* 活動歴を表示するタグ */
-.activity-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.activity-tag {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid #d9d2c6;
-  background: #fffdf9;
-  border-radius: 999px;
-  padding: 7px 12px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-/* スマートフォン */
-@media (max-width: 600px) {
-  .candidate-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
-  }
-
-  .candidate-card {
-    border-radius: 11px;
-  }
-
-  .card-copy {
-    padding: 10px 9px 5px;
-  }
-
-  .candidate-name {
-    font-size: 13px;
-  }
-
-  .card-actions {
-    padding: 5px 7px 9px;
-    flex-wrap: wrap;
-  }
-
-  .profile-heading {
-    display: block;
-  }
-
-  .activity-tag {
-    font-size: 11px;
-    padding: 6px 10px;
-  }
-}
-
-
-/* 活動歴ジャンル別タグ */
-.activity-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.activity-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  color: #292929;
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 500;
-}
-
-@media (max-width: 600px) {
-  .activity-tag {
-    padding: 6px 10px;
-    font-size: 11px;
-  }
-}
-
-/* 2026-10: チーム別表示・比較カード・プロフィール改修 */
-.list-filters { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
-.filter-control { display:flex; align-items:center; gap:9px; color:var(--muted); font-size:12px; }
-.filter-control select { border:1px solid var(--line); border-radius:10px; background:var(--surface); padding:9px 12px; color:var(--ink); max-width:100%; }
-.members-toggle { display:inline-flex; align-items:center; gap:7px; font-size:12px; color:var(--ink); cursor:pointer; }
-.members-toggle input { accent-color:var(--accent); width:16px; height:16px; }
-.team-groups { display:grid; gap:22px; padding-bottom:54px; }
-.team-group { border:3px solid var(--team-color,var(--line)); border-radius:20px; padding:18px; background:rgba(255,253,249,.7); min-width:0; }
-.team-group-title { display:flex; align-items:baseline; gap:10px; font-size:21px; margin:0 0 16px; letter-spacing:.07em; }
-.team-group-title span { font-size:11px; color:var(--muted); font-weight:400; letter-spacing:0; }
-.team-card-grid { padding-bottom:0; }
-.candidate-name-line { display:flex; flex-wrap:wrap; align-items:baseline; gap:2px; }
-.candidate-name { display:inline; }
-.candidate-age { color:var(--muted); font-size:11px; font-weight:400; white-space:nowrap; }
-.card-actions { justify-content:flex-end; padding-top:0; }
-.member-card { --team-color:#b9b4ac; border:2px dashed #b9b4ac; background:#efede8; }
-.member-card:hover { transform:none; box-shadow:none; }
-.member-card .card-copy { padding-bottom:12px; }
-.member-label { display:inline-block; color:#67645d; font-size:10px; margin-bottom:6px; font-weight:600; }
-.member-height { display:block; font-size:10px; color:var(--muted); margin-top:5px; }
-.profile-title-row { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap; }
-.profile-title-row h1 { display:flex; flex-wrap:wrap; align-items:baseline; gap:5px; margin:0; }
-.profile-title-row h1 .candidate-age { font-size:clamp(13px,2vw,17px); }
-.profile-task-meta { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:12px 20px; }
-.profile-task-meta > div { display:flex; flex-direction:column; gap:5px; min-width:90px; max-width:210px; }
-.profile-task-meta span { font-size:10px; color:var(--muted); }
-.profile-task-meta strong { font-size:13px; line-height:1.6; overflow-wrap:anywhere; }
-.match-note { font-size:11px; color:#567c93; margin-top:5px; }
-.memo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-.memo-title { display:block; font-weight:700; font-size:14px; margin-bottom:9px; }
-.memo-textarea { min-height:190px; }
-@media(max-width:600px) {
-  .list-filters { align-items:flex-start; flex-direction:column; gap:12px; }
-  .filter-control { width:100%; justify-content:space-between; }
-  .filter-control select { flex:1; max-width:75%; }
-  .team-group { padding:11px; border-width:2px; border-radius:14px; }
-  .team-group-title { font-size:17px; margin-bottom:11px; }
-  .candidate-age { font-size:10px; }
-  .profile-title-row { flex-direction:column; gap:13px; }
-  .profile-task-meta { justify-content:flex-start; width:100%; gap:12px; }
-  .profile-task-meta > div { min-width:calc(50% - 8px); max-width:none; }
-  .memo-grid { grid-template-columns:1fr; }
-}
-
-
-/* ==========================================
-   候補者一覧・個人詳細のレイアウト修正
-   ========================================== */
-
-/* チーム別表示の外枠を横幅いっぱいに */
-#candidate-grid.team-list-container {
-  display: block;
-  padding-bottom: 54px;
-}
-
-/* チームごとの大きな枠 */
-.team-group {
-  width: 100%;
-  margin-bottom: 22px;
-  padding: 18px;
-  border: 3px solid var(--team-color, #ddd);
-  border-radius: 18px;
-  background: rgba(255, 253, 249, 0.7);
-}
-
-/* チーム名と人数 */
-.team-group-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 15px;
-}
-
-.team-group-heading h2 {
-  margin: 0;
-  font-size: 21px;
-  letter-spacing: 0.06em;
-}
-
-.team-group-heading > span {
-  color: var(--muted);
-  font-size: 12px;
-}
-
-/* チーム内の候補者を4列表示 */
-.team-candidate-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  padding-bottom: 0;
-  align-items: start;
-}
-
-/* 名前順・年齢順・身長順 */
-#candidate-grid.mixed-list-container {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  align-items: start;
-}
-
-/* カードの高さを中身に合わせる */
-.candidate-card {
-  height: auto;
-  min-height: 0;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 候補者名と年齢を必ず横並び */
-.candidate-name-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  gap: 3px;
-  min-width: 0;
-}
-
-.candidate-name-row .candidate-name {
-  display: inline;
-  flex: 0 1 auto;
-  min-width: 0;
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 700;
-  overflow-wrap: anywhere;
-}
-
-/* 年齢は小さく薄く、改行しない */
-.candidate-name-row .candidate-age {
-  display: inline;
-  flex: 0 0 auto;
-  font-size: 11px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* カード内の余白 */
-.candidate-card .card-copy {
-  padding: 12px 11px 8px;
-}
-
-.candidate-card .card-actions {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 10px 10px;
-}
-
-/* ==========================================
-   ≠MEメンバーのカード
-   ========================================== */
-
-.reference-card {
-  border: 2px dashed #b9b4ac;
-  background: #efede8;
-  height: auto;
-  min-height: 0;
-  align-self: start;
-  justify-content: flex-start;
-}
-
-.reference-card:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.reference-card .card-copy {
-  padding: 12px 11px 10px;
-}
-
-.reference-label {
-  display: block;
-  font-size: 10px;
-  font-weight: 600;
-  color: #77736d;
-  margin-bottom: 7px;
-}
-
-.reference-card .candidate-name-row {
-  margin: 0;
-}
-
-.reference-meta {
-  margin-top: 5px;
-  font-size: 11px;
-  color: var(--muted);
-}
-
-/* ==========================================
-   個人詳細：名前の右側にチーム・課題曲
-   ========================================== */
-
-.profile-heading {
-  display: block;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* 名前を左、審査情報を右に */
-.profile-heading-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
-  width: 100%;
-}
-
-/* 左側の名前エリア */
-.profile-heading .profile-meta {
-  flex: 0 1 auto;
-  min-width: 0;
-}
-
-/* 名前と年齢を同じ行に */
-.profile-name-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  gap: 6px;
-  white-space: nowrap;
-}
-
-.profile-name-row h1,
-.profile-meta .profile-name-row h1 {
-  margin: 0;
-  font-size: clamp(25px, 3.2vw, 38px);
-  line-height: 1.4;
-}
-
-.profile-name-row .candidate-age {
-  display: inline;
-  flex-shrink: 0;
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* 右側の審査情報 */
-.profile-assignment {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 12px 20px;
-  margin-left: auto;
-  text-align: left;
-}
-
-/* チーム・各課題曲 */
-.assignment-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  min-width: 95px;
-  max-width: 190px;
-}
-
-.assignment-item > span:first-child {
-  font-size: 10px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.assignment-item strong {
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 600;
-  overflow-wrap: anywhere;
-}
-
-.assignment-item .team-label {
-  margin: 0;
-  font-size: 12px;
-  color: var(--ink);
-}
-
-/* ==========================================
-   画面幅に応じた調整
-   ========================================== */
-
-@media (max-width: 850px) {
-  .team-candidate-grid,
-  #candidate-grid.mixed-list-container {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .profile-heading-layout {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .profile-assignment {
-    justify-content: flex-start;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  /* スマホは2列 */
-  .team-candidate-grid,
-  #candidate-grid.mixed-list-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
-  }
-
-  .team-group {
-    padding: 10px;
-    border-width: 2px;
-    border-radius: 13px;
-    margin-bottom: 16px;
-  }
-
-  .team-group-heading {
-    margin-bottom: 11px;
-  }
-
-  .team-group-heading h2 {
-    font-size: 17px;
-  }
-
-  .candidate-card .card-copy,
-  .reference-card .card-copy {
-    padding: 10px 8px 7px;
-  }
-
-  .candidate-name-row {
-    gap: 2px;
-  }
-
-  .candidate-name-row .candidate-name {
-    font-size: 12px;
-  }
-
-  .candidate-name-row .candidate-age {
-    font-size: 10px;
-  }
-
-  .reference-label {
-    font-size: 9px;
-    margin-bottom: 6px;
-  }
-
-  .reference-meta {
-    font-size: 10px;
-  }
-
-  /* 個人詳細 */
-  .profile-heading-layout {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-  }
-
-  .profile-name-row {
-    gap: 4px;
-  }
-
-  .profile-name-row h1,
-  .profile-meta .profile-name-row h1 {
-    font-size: 25px;
-  }
-
-  .profile-name-row .candidate-age {
-    font-size: 13px;
-  }
-
-  .profile-assignment {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-    width: 100%;
-    margin: 0;
-  }
-
-  .assignment-item {
-    min-width: 0;
-    max-width: none;
-  }
-
-  .assignment-item > span:first-child {
-    font-size: 9px;
-  }
-
-  .assignment-item strong,
-  .assignment-item .team-label {
-    font-size: 11px;
-  }
-}
-
-
-/* ========================================
-   ≠MEメンバーカード
-======================================== */
-
-.candidate-card.reference-card {
-  background-color: #D2FFF8;
-  border: 1px solid #79CCC0;
-  border-style: solid;
-}
-
 
