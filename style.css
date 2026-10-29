@@ -203,3 +203,156 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   .info-item { padding: 12px; }
 }
 
+/* ========================================
+   一覧操作パネル
+======================================== */
+
+.list-toolbar {
+  padding-bottom: 16px;
+}
+
+.filter-panel {
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.filter-panel-top {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #55534d;
+}
+
+.filter-sublabel {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.filter-field select,
+.filter-age-range input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.filter-field select:focus,
+.filter-age-range input:focus {
+  border-color: #b9a99a;
+}
+
+.filter-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 18px 0;
+}
+
+.filter-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-profile-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.filter-age-range {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.filter-age-range input {
+  text-align: center;
+  padding: 0 5px;
+}
+
+.filter-age-range > span {
+  color: var(--muted);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.filter-members-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.filter-members-toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .filter-panel {
+    padding: 14px;
+    border-radius: 13px;
+  }
+
+  .filter-panel-top,
+  .filter-profile-fields {
+    gap: 10px;
+  }
+
+  .filter-field {
+    gap: 7px;
+  }
+
+  .filter-label {
+    font-size: 11px;
+  }
+
+  .filter-field select,
+  .filter-age-range input {
+    height: 39px;
+    font-size: 11px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .filter-age-range {
+    gap: 5px;
+  }
+
+  .filter-age-range input {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .filter-divider {
+    margin: 14px 0;
+  }
+}
+
+
