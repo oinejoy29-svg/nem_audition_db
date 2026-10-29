@@ -51,6 +51,11 @@
 
   const sortSelect = document.getElementById("sort-select");
   const filterSelect = document.getElementById("filter-select");
+  
+　const originFilter = document.getElementById("origin-filter");
+　const ageMinInput = document.getElementById("age-min");
+　const ageMaxInput = document.getElementById("age-max");
+
 
   const membersToggleWrap =
     document.getElementById("members-toggle-wrap");
@@ -422,23 +427,98 @@ function ageMarkup(birthDate) {
      絞り込み
   ======================================== */
 
-  function filteredCandidates() {
-    const mode = filterSelect.value;
 
-    if (mode === "all") {
-      return [...candidates];
+/* ========================================
+   自己評価・プロフィールで絞り込み
+======================================== */
+
+function getItemOrigin(item) {
+  return String(
+    item.profile?.hometown ??
+    item.profile?.birthplace ??
+    item.hometown ??
+    item.birthplace ??
+    ""
+  ).trim();
+}
+
+function matchesFilters(item) {
+  const mode = filterSelect.value;
+
+  // 自己評価
+  if (mode !== "all") {
+    const personal = getPersonal(item.id);
+
+    if (mode === "favorite") {
+      if (!personal.favorite) return false;
+    } else {
+      if (!personal.likes?.[mode]) return false;
+    }
+  }
+
+  // 出身地
+  const selectedOrigin = originFilter.value;
+
+  if (
+    selectedOrigin !== "all" &&
+    getItemOrigin(item) !== selectedOrigin
+  ) {
+    return false;
+  }
+
+  // 年齢
+  const age = getAge(getBirthDate(item));
+  const minText = ageMinInput.value.trim();
+  const maxText = ageMaxInput.value.trim();
+
+  if (minText !== "" || maxText !== "") {
+    if (age === null) return false;
+
+    if (minText !== "" && age < Number(minText)) {
+      return false;
     }
 
-    return candidates.filter(candidate => {
-      const personal = getPersonal(candidate.id);
-
-      if (mode === "favorite") {
-        return Boolean(personal.favorite);
-      }
-
-      return Boolean(personal.likes?.[mode]);
-    });
+    if (maxText !== "" && age > Number(maxText)) {
+      return false;
+    }
   }
+
+  return true;
+}
+
+function filteredCandidates() {
+  return candidates.filter(matchesFilters);
+}
+
+function filteredMembers() {
+  return members.filter(matchesFilters);
+}
+
+/* 出身地の選択肢をデータから作成 */
+function setupOriginFilter() {
+  const origins = new Set();
+
+  for (const item of [...candidates, ...members]) {
+    const origin = getItemOrigin(item);
+
+    if (origin) origins.add(origin);
+  }
+
+  const sorted = [...origins].sort((a, b) =>
+    a.localeCompare(b, "ja")
+  );
+
+  originFilter.innerHTML =
+    '<option value="all">出身地：すべて</option>';
+
+  for (const origin of sorted) {
+    const option = document.createElement("option");
+    option.value = origin;
+    option.textContent = origin;
+    originFilter.appendChild(option);
+  }
+}
+
 
   /* ========================================
      並び替え
@@ -479,7 +559,7 @@ function ageMarkup(birthDate) {
         if (heightA === null) return 1;
         if (heightB === null) return -1;
 
-        return heightA - heightB || compareNames(a, b);
+        return heightB - heightA || compareNames(a, b);
       });
     }
 
@@ -619,81 +699,71 @@ function ageMarkup(birthDate) {
      一覧全体
   ======================================== */
 
-  function renderList() {
-    const mode = sortSelect.value;
 
-    const filtered = filteredCandidates();
+function renderList() {
+  const mode = sortSelect.value;
+  const isTeamMode = mode === "team";
 
-    const isTeamMode = mode === "team";
+  const filtered = filteredCandidates();
 
-    membersToggleWrap.hidden = isTeamMode;
+  const visibleMembers =
+    !isTeamMode && showMembersCheckbox.checked
+      ? filteredMembers()
+      : [];
 
-    grid.innerHTML = "";
+  membersToggleWrap.hidden = isTeamMode;
 
-    grid.classList.toggle(
-      "team-list-container",
-      isTeamMode
-    );
+  grid.innerHTML = "";
 
-    grid.classList.toggle(
-      "mixed-list-container",
-      !isTeamMode
-    );
+  grid.classList.toggle(
+    "team-list-container",
+    isTeamMode
+  );
 
-    emptyState.hidden = filtered.length !== 0;
+  grid.classList.toggle(
+    "mixed-list-container",
+    !isTeamMode
+  );
 
-    if (!filtered.length) {
-      listStatus.textContent = "該当する候補者は0人です。";
-      return;
-    }
-
-    if (isTeamMode) {
-      renderTeamGroups(filtered);
-    } else {
-      let items = filtered.map(candidate => ({
+  if (isTeamMode) {
+    renderTeamGroups(filtered);
+  } else {
+    let items = [
+      ...filtered.map(candidate => ({
         ...candidate,
         _reference: false
-      }));
+      })),
+      ...visibleMembers.map(member => ({
+        ...member,
+        _reference: true
+      }))
+    ];
 
-      /*
-        ≠MEメンバーは絞り込み対象外。
-        全候補者表示時のみ比較カードを追加。
-      */
+    items = sortItems(items, mode);
 
-      if (
-        showMembersCheckbox.checked &&
-        filterSelect.value === "all"
-      ) {
-        items = items.concat(
-          members.map(member => ({
-            ...member,
-            _reference: true
-          }))
-        );
-      }
-
-      items = sortItems(items, mode);
-
-      for (const item of items) {
-        grid.appendChild(
-          item._reference
-            ? memberCard(item)
-            : candidateCard(item)
-        );
-      }
-    }
-
-    listStatus.textContent =
-      `候補者 ${filtered.length}人` +
-      (
-        !isTeamMode &&
-        showMembersCheckbox.checked &&
-        filterSelect.value === "all" &&
-        members.length
-          ? ` ／ ≠MEメンバー ${members.length}人`
-          : ""
+    for (const item of items) {
+      grid.appendChild(
+        item._reference
+          ? memberCard(item)
+          : candidateCard(item)
       );
+    }
   }
+
+  const total =
+    filtered.length + visibleMembers.length;
+
+  emptyState.hidden = total !== 0;
+
+  listStatus.textContent =
+    `候補者 ${filtered.length}人` +
+    (
+      !isTeamMode && showMembersCheckbox.checked
+        ? ` ／ ≠MEメンバー ${visibleMembers.length}人`
+        : ""
+    );
+}
+
 
   /* ========================================
      お気に入り・いいね
@@ -1382,6 +1452,13 @@ function ageMarkup(birthDate) {
     renderList
   );
 
+  
+originFilter.addEventListener("change", renderList);
+
+ageMinInput.addEventListener("input", renderList);
+ageMaxInput.addEventListener("input", renderList);
+
+
   backButton.addEventListener(
     "click",
     showList
@@ -1461,7 +1538,10 @@ function ageMarkup(birthDate) {
         members = [];
       }
 
+      
+      setupOriginFilter();
       renderList();
+
 
     } catch (error) {
       console.error(
