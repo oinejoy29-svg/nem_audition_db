@@ -256,13 +256,15 @@
     return age >= 0 ? age : null;
   }
 
-  function ageMarkup(birthDate) {
-    const age = getAge(birthDate);
 
-    return age === null
-      ? ""
-      : `<span class="candidate-age">（${age}歳）</span>`;
-  }
+function ageMarkup(birthDate) {
+  const age = getAge(birthDate);
+
+  return age === null
+    ? ""
+    : `<span class="candidate-age">（${age}）</span>`;
+}
+
 
   /*
     日本の学校年度:
