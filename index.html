@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ja">
 <head>
@@ -32,28 +33,51 @@
           <p class="eyebrow">CANDIDATES</p>
           <h1 id="list-heading">候補者一覧</h1>
         </div>
+
         <label class="sort-control">
           <span>並び替え</span>
           <select id="sort-select">
-            <option value="default">初期順</option>
-            <option value="overall">総合いいね順</option>
-            <option value="singing">歌唱いいね順</option>
-            <option value="performance">パフォーマンスいいね順</option>
-            <option value="favorite">お気に入り順</option>
+            <option value="team">4次審査チーム別</option>
+            <option value="name">名前順</option>
+            <option value="age">年齢順（若い順）</option>
+            <option value="height">身長順（低い順）</option>
           </select>
         </label>
       </div>
+
+      <div class="list-filters">
+        <label class="filter-control">
+          <span>絞り込み</span>
+          <select id="filter-select">
+            <option value="all">すべての候補者</option>
+            <option value="favorite">★ お気に入り</option>
+            <option value="overall">♡ 総合いいね</option>
+            <option value="singing">♡ 歌唱いいね</option>
+            <option value="performance">♡ パフォーマンスいいね</option>
+          </select>
+        </label>
+
+        <label id="members-toggle-wrap" class="members-toggle" hidden>
+          <input type="checkbox" id="show-members">
+          <span>≠MEメンバーを表示</span>
+        </label>
+      </div>
+
       <p id="list-status" class="status-line" aria-live="polite"></p>
+
       <div id="candidate-grid" class="candidate-grid"></div>
+
       <div id="empty-state" class="empty-state" hidden>
         <span class="empty-mark">✳</span>
-        <h2>候補者データはまだ登録されていません</h2>
-        <p>公式プロフィールを確認し、<code>data/candidates.json</code> に登録すると一覧に表示されます。</p>
+        <h2>表示する候補者がいません</h2>
+        <p>絞り込み条件を変更するか、データを確認してください。</p>
       </div>
     </section>
 
     <section id="detail-view" class="detail-view" hidden aria-live="polite">
-      <button id="back-button" class="back-button" type="button">← 候補者一覧に戻る</button>
+      <button id="back-button" class="back-button" type="button">
+        ← 候補者一覧に戻る
+      </button>
       <div id="detail-content"></div>
     </section>
   </main>
@@ -64,3 +88,4 @@
   </footer>
 </body>
 </html>
+
