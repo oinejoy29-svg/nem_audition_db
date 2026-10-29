@@ -309,9 +309,87 @@ function ageMarkup(birthDate) {
       "";
   }
 
-  function compareNames(a, b) {
-    return a.name.localeCompare(b.name, "ja");
+
+  /* ========================================
+     名前順：候補者32人＋≠MEメンバー11人
+  ======================================== */
+
+  const NAME_ORDER = [
+    "イ・ソユル",
+    "イ・ダイン",
+    "石田 千穂",
+    "石原 愛梨沙",
+    "井上 弥生",
+    "今枝 桜",
+    "井餘田 華",
+    "小笠原 愛桜",
+    "岡野 詩慧",
+    "尾木波菜",
+    "荻山 さくら",
+    "落合希来里",
+    "蟹沢萌子",
+    "河口夏音",
+    "川中子奈月心",
+    "河野 奈々帆",
+    "北野 心絆",
+    "木村 莉子",
+    "小泉 のん",
+    "櫻井もも",
+    "佐藤 涼風",
+    "柴田 みつる",
+    "白石 美空",
+    "鈴木瞳美",
+    "鈴木 麗衣",
+    "谷崎早耶",
+    "徳永 心葉",
+    "冨田菜々風",
+    "永田詩央里",
+    "中村 釉香",
+    "那須 咲月",
+    "成石 亜里紗",
+    "林 美澪",
+    "樋口 美沙",
+    "日野 美羽",
+    "本田珠由記",
+    "宮内 菜々美",
+    "宮野 陽菜",
+    "森 真梨子",
+    "矢野 咲香",
+    "横山 結愛",
+    "吉野 心春",
+    "羅瑞婷"
+  ];
+
+  function normalizeCandidateName(name) {
+    return String(name || "")
+      .replace(/[\s　]/g, "")
+      .normalize("NFKC");
   }
+
+  const NAME_RANK = new Map(
+    NAME_ORDER.map((name, index) => [
+      normalizeCandidateName(name),
+      index
+    ])
+  );
+
+  function compareNames(a, b) {
+    const nameA = normalizeCandidateName(a.name);
+    const nameB = normalizeCandidateName(b.name);
+
+    const rankA = NAME_RANK.get(nameA);
+    const rankB = NAME_RANK.get(nameB);
+
+    if (rankA !== undefined && rankB !== undefined) {
+      return rankA - rankB;
+    }
+
+    if (rankA !== undefined) return -1;
+    if (rankB !== undefined) return 1;
+
+    return nameA.localeCompare(nameB, "ja");
+  }
+
 
   /* ========================================
      チーム
