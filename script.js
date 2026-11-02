@@ -466,21 +466,22 @@ function matchesFilters(item) {
     return false;
   }
 
-  // 年齢
+  // 年齢：ダブルレンジスライダー
   const age = getAge(getBirthDate(item));
-  const minText = ageMinInput.value.trim();
-  const maxText = ageMaxInput.value.trim();
 
-  if (minText !== "" || maxText !== "") {
+  const minAge = Number(ageMinInput.value);
+  const maxAge = Number(ageMaxInput.value);
+
+  const fullMin = Number(ageMinInput.min);
+  const fullMax = Number(ageMaxInput.max);
+
+  // 両端が初期位置なら年齢で絞り込まない
+  const ageFilterActive =
+    minAge > fullMin || maxAge < fullMax;
+
+  if (ageFilterActive) {
     if (age === null) return false;
-
-    if (minText !== "" && age < Number(minText)) {
-      return false;
-    }
-
-    if (maxText !== "" && age > Number(maxText)) {
-      return false;
-    }
+    if (age < minAge || age > maxAge) return false;
   }
 
   return true;
@@ -1455,8 +1456,15 @@ function renderList() {
   
 originFilter.addEventListener("change", renderList);
 
-ageMinInput.addEventListener("input", renderList);
-ageMaxInput.addEventListener("input", renderList);
+  ageMinInput.addEventListener("input", () => {
+    updateAgeRange("min");
+    renderList();
+  });
+
+  ageMaxInput.addEventListener("input", () => {
+    updateAgeRange("max");
+    renderList();
+  });
 
 
   backButton.addEventListener(
@@ -1568,6 +1576,269 @@ ageMaxInput.addEventListener("input", renderList);
       }
     }
   }
+
+  
+  /* ========================================
+     コンパクト操作バー
+  ======================================== */
+
+  const sortMenuButton =
+    document.getElementById("sort-menu-button");
+
+  const favoriteMenuButton =
+    document.getElementById("favorite-menu-button");
+
+  const profileFilterButton =
+    document.getElementById("profile-filter-button");
+
+  const sortMenu =
+    document.getElementById("sort-menu");
+
+  const favoriteMenu =
+    document.getElementById("favorite-menu");
+
+  const profileFilterPanel =
+    document.getElementById("profile-filter-panel");
+
+  const profileFilterDot =
+    document.getElementById("profile-filter-dot");
+
+  const ageRangeLabel =
+    document.getElementById("age-range-label");
+
+  const ageRangeFill =
+    document.getElementById("age-range-fill");
+
+  const ageRangeStart =
+    document.getElementById("age-range-start");
+
+  const ageRangeEnd =
+    document.getElementById("age-range-end");
+
+  const profileFilterReset =
+    document.getElementById("profile-filter-reset");
+
+  function closeControlMenus() {
+    sortMenu.hidden = true;
+    favoriteMenu.hidden = true;
+
+    sortMenuButton.setAttribute(
+      "aria-expanded", "false"
+    );
+
+    favoriteMenuButton.setAttribute(
+      "aria-expanded", "false"
+    );
+  }
+
+  function toggleControlMenu(menu, button) {
+    const shouldOpen = menu.hidden;
+
+    closeControlMenus();
+
+    if (shouldOpen) {
+      menu.hidden = false;
+      button.setAttribute(
+        "aria-expanded", "true"
+      );
+    }
+  }
+
+  // 並び替え
+  sortMenuButton.addEventListener("click", () => {
+    toggleControlMenu(sortMenu, sortMenuButton);
+  });
+
+  sortMenu.querySelectorAll("[data-sort-value]")
+    .forEach(button => {
+      button.addEventListener("click", () => {
+        sortSelect.value = button.dataset.sortValue;
+
+        sortMenu.querySelectorAll("button")
+          .forEach(item => {
+            item.classList.toggle(
+              "is-selected",
+              item === button
+            );
+          });
+
+        sortMenuButton.classList.toggle(
+          "has-selection",
+          sortSelect.value !== "team"
+        );
+
+        closeControlMenus();
+        renderList();
+      });
+    });
+
+  // お気に入り・自己評価
+  favoriteMenuButton.addEventListener("click", () => {
+    toggleControlMenu(
+      favoriteMenu,
+      favoriteMenuButton
+    );
+  });
+
+  favoriteMenu
+    .querySelectorAll("[data-favorite-value]")
+    .forEach(button => {
+      button.addEventListener("click", () => {
+        filterSelect.value =
+          button.dataset.favoriteValue;
+
+        favoriteMenu.querySelectorAll("button")
+          .forEach(item => {
+            item.classList.toggle(
+              "is-selected",
+              item === button
+            );
+          });
+
+        favoriteMenuButton.classList.toggle(
+          "has-selection",
+          filterSelect.value !== "all"
+        );
+
+        closeControlMenus();
+        renderList();
+      });
+    });
+
+  // プロフィール絞り込み
+  profileFilterButton.addEventListener("click", () => {
+    const shouldOpen = profileFilterPanel.hidden;
+
+    closeControlMenus();
+
+    profileFilterPanel.hidden = !shouldOpen;
+
+    profileFilterButton.setAttribute(
+      "aria-expanded",
+      String(shouldOpen)
+    );
+  });
+
+  // メニュー外を押したら閉じる
+  document.addEventListener("click", event => {
+    if (
+      !sortMenuButton.contains(event.target) &&
+      !sortMenu.contains(event.target)
+    ) {
+      sortMenu.hidden = true;
+      sortMenuButton.setAttribute(
+        "aria-expanded", "false"
+      );
+    }
+
+    if (
+      !favoriteMenuButton.contains(event.target) &&
+      !favoriteMenu.contains(event.target)
+    ) {
+      favoriteMenu.hidden = true;
+      favoriteMenuButton.setAttribute(
+        "aria-expanded", "false"
+      );
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeControlMenus();
+    }
+  });
+
+  /* ========================================
+     年齢ダブルレンジスライダー
+  ======================================== */
+
+  function updateAgeRange(changedHandle = null) {
+    let min = Number(ageMinInput.value);
+    let max = Number(ageMaxInput.value);
+
+    // つまみ同士が交差しないようにする
+    if (min > max) {
+      if (changedHandle === "min") {
+        min = max;
+      } else {
+        max = min;
+      }
+    }
+
+    ageMinInput.value = String(min);
+    ageMaxInput.value = String(max);
+
+    const lowerBound = Number(ageMinInput.min);
+    const upperBound = Number(ageMaxInput.max);
+    const span = Math.max(1, upperBound - lowerBound);
+
+    const left = (min - lowerBound) / span * 100;
+    const right = (max - lowerBound) / span * 100;
+
+    ageRangeFill.style.left = `${left}%`;
+    ageRangeFill.style.width = `${right - left}%`;
+
+    // 重なったつまみの操作順を調整
+    ageMinInput.style.zIndex = min >= max - 1 ? "5" : "3";
+    ageMaxInput.style.zIndex = min >= max - 1 ? "4" : "3";
+
+    const isAll =
+      min === lowerBound && max === upperBound;
+
+    ageRangeLabel.textContent = isAll
+      ? "すべて"
+      : `${min}〜${max}歳`;
+
+    ageRangeStart.textContent = `${lowerBound}歳`;
+    ageRangeEnd.textContent = `${upperBound}歳`;
+
+    updateProfileFilterIndicator();
+  }
+
+  function updateProfileFilterIndicator() {
+    const ageActive =
+      Number(ageMinInput.value) >
+        Number(ageMinInput.min) ||
+      Number(ageMaxInput.value) <
+        Number(ageMaxInput.max);
+
+    const active =
+      originFilter.value !== "all" || ageActive;
+
+    profileFilterDot.hidden = !active;
+
+    profileFilterButton.classList.toggle(
+      "has-selection",
+      active
+    );
+  }
+
+  ageMinInput.addEventListener("input", () => {
+    updateAgeRange("min");
+  });
+
+  ageMaxInput.addEventListener("input", () => {
+    updateAgeRange("max");
+  });
+
+  originFilter.addEventListener(
+    "change",
+    updateProfileFilterIndicator
+  );
+
+  profileFilterReset.addEventListener("click", () => {
+    originFilter.value = "all";
+
+    ageMinInput.value = ageMinInput.min;
+    ageMaxInput.value = ageMaxInput.max;
+
+    updateAgeRange();
+    renderList();
+  });
+
+  // 初期状態
+  updateAgeRange();
+
 
   init();
 
