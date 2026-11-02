@@ -1308,12 +1308,12 @@ function detailEvaluationMarkup(candidate, personal) {
       panel = screeningPanel(candidate);
     }
 
-    if (activeTab === "memo") {
-      panel = memoPanel(candidate);
-    }
+if (activeTab === "memo") {
+  panel = memoPanel(candidate);
+}
 
-
-<section class="profile-heading">
+detailContent.innerHTML = `
+  <section class="profile-heading">
   <div class="profile-heading-layout">
 
     <!-- 左側 -->
