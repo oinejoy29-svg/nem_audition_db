@@ -736,7 +736,18 @@ function setupOriginFilter() {
      一覧全体
   ======================================== */
 
+function setupEvaluationFilter() {
+  if (!filterSelect) return;
 
+  filterSelect.innerHTML = `
+    <option value="all">すべて</option>
+    <option value="favorite">お気に入り</option>
+    ${LIKE_TYPES.map(type => `
+      <option value="${type.key}">${type.label} ♡</option>
+    `).join("")}
+  `;
+}
+  
 function renderList() {
   const mode = sortSelect.value;
   const isTeamMode = mode === "team";
