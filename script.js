@@ -719,8 +719,7 @@ function setupOriginFilter() {
 
   ${team === "WHITE" ? `
     <div class="team-assignment-songs">
-      <div>パフォ：す、好きじゃない！</div>
-      <div>歌唱：モブノデレラ</div>
+      <div>パフォ：す、好きじゃない！　　歌唱：モブノデレラ</div>
     </div>
   ` : ""}
 
