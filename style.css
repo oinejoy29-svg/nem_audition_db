@@ -942,3 +942,29 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 }
 
 
+/* チーム別表示：課題曲 */
+.team-group-heading .team-assignment-songs {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.team-group-heading .team-member-count {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .team-group-heading .team-assignment-songs {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+}
+
+
+
