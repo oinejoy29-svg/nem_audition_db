@@ -713,10 +713,22 @@ function setupOriginFilter() {
       );
 
       section.innerHTML = `
-        <div class="team-group-heading">
-          <h2>${team}</h2>
-          <span>${teamCandidates.length}人</span>
-        </div>
+
+<div class="team-group-heading">
+  <h2>${team}</h2>
+
+  ${team === "WHITE" ? `
+    <div class="team-assignment-songs">
+      <div>パフォ：す、好きじゃない！</div>
+      <div>歌唱：モブノデレラ</div>
+    </div>
+  ` : ""}
+
+  <span class="team-member-count">
+    ${teamCandidates.length}人
+  </span>
+</div>
+
 
         <div class="team-candidate-grid candidate-grid"></div>
       `;
