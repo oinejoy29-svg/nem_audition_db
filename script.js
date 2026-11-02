@@ -18,11 +18,14 @@
     BLUE: "#7c9db9"
   };
 
-  const LIKE_TYPES = [
-    { key: "overall", label: "総合" },
-    { key: "singing", label: "歌唱" },
-    { key: "performance", label: "パフォーマンス" }
-  ];
+
+const LIKE_TYPES = [
+  { key: "singing", label: "歌唱" },
+  { key: "performance", label: "パフォーマンス" },
+  { key: "visual", label: "ビジュアル" },
+  { key: "personality", label: "愛嬌・性格" }
+];
+
 
   const ACTIVITY_GENRE_COLORS = {
     "アイドル": "#f9dce7",
@@ -593,7 +596,7 @@ function setupOriginFilter() {
         if (heightA === null) return 1;
         if (heightB === null) return -1;
 
-        return heightB - heightA || compareNames(a, b);
+        return heightA - heightB || compareNames(a, b);
       });
     }
 
@@ -949,40 +952,28 @@ function renderList() {
   }
 
 
+
 function matchMarkup(candidate, type) {
   const matches = matchingMembers(candidate, type);
 
   if (!matches.length) return "";
 
-  let label = "一致する≠MEメンバー";
+  const profile = candidate.profile || {};
+
+  let title = "";
 
   if (type === "schoolYear") {
-    label = "同年代の≠MEメンバー";
-  }
-
-  if (type === "hometown") {
-    const hometown = candidate.profile?.hometown || "同じ地域";
-    label = `${hometown}出身の≠MEメンバー`;
-  }
-
-  if (type === "bloodType") {
-    // 血液型の従来の表示を維持
-    return `
-      <div class="member-match">
-        <span class="member-match-label">≠ME：</span>
-        ${matches.map(member => `
-          <span class="member-match-name">
-            ${escapeHTML(member.name)}
-          </span>
-        `).join("")}
-      </div>
-    `;
+    title = "同年代の≠MEメンバー";
+  } else if (type === "hometown") {
+    title = `${profile.hometown || "同じ出身地"}出身の≠MEメンバー`;
+  } else if (type === "bloodType") {
+    title = `${profile.bloodType || "同じ血液型"}の≠MEメンバー`;
   }
 
   return `
-    <div class="member-match member-match-green">
+    <div class="member-match-green">
       <div class="member-match-green-title">
-        ${escapeHTML(label)}
+        ${escapeHTML(title)}
       </div>
 
       <div class="member-match-green-names">
@@ -995,6 +986,7 @@ function matchMarkup(candidate, type) {
     </div>
   `;
 }
+
 
 
   /* ========================================
