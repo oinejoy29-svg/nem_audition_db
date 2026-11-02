@@ -1630,8 +1630,11 @@ originFilter.addEventListener("change", renderList);
       }
 
       
-      setupOriginFilter();
-      renderList();
+
+　　　　setupOriginFilter();
+　　　　setupEvaluationFilter();
+　　　　renderList();
+
 
 
     } catch (error) {
@@ -1756,6 +1759,26 @@ originFilter.addEventListener("change", renderList);
     });
 
   // お気に入り・自己評価
+
+  // 自己評価メニューを4項目に統一
+  favoriteMenu.innerHTML = `
+    <button type="button" data-favorite-value="all">
+      すべて
+    </button>
+    <button type="button" data-favorite-value="favorite">
+      お気に入り
+    </button>
+    ${LIKE_TYPES.map(type => `
+      <button
+        type="button"
+        data-favorite-value="${type.key}"
+      >
+        ${escapeHTML(type.label)} ♡
+      </button>
+    `).join("")}
+  `;
+
+  
   favoriteMenuButton.addEventListener("click", () => {
     toggleControlMenu(
       favoriteMenu,
