@@ -1241,27 +1241,30 @@ function profilePanel(candidate) {
      課題曲
   ======================================== */
 
-  function getAssignmentSongs(candidate) {
-    /*
-      今後 candidates.json に追加する項目。
 
-      singingSong:
-        歌唱課題曲
-
-      performanceSong:
-        パフォーマンス課題曲
-    */
-
+function getAssignmentSongs(candidate) {
+  // WHITEチーム共通の4次審査課題曲
+  if (candidate.team === "WHITE") {
     return {
-      singing: candidate.singingSong ||
-        candidate.assignments?.singing ||
-        "",
-
-      performance: candidate.performanceSong ||
-        candidate.assignments?.performance ||
-        ""
+      singing: "モブノデレラ",
+      performance: "す、好きじゃない！"
     };
   }
+
+  // BLACK・BLUEは個別に登録された曲を表示
+  return {
+    singing:
+      candidate.singingSong ||
+      candidate.assignments?.singing ||
+      "",
+
+    performance:
+      candidate.performanceSong ||
+      candidate.assignments?.performance ||
+      ""
+  };
+}
+
 
   /* ========================================
      個人詳細
