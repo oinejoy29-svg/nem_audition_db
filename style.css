@@ -765,7 +765,58 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 
 
 
-/* スマホ版：個人ページの4次審査配置を修正 */
+
+/* ========================================
+   個人ページ：左右独立レイアウト
+======================================== */
+
+.profile-heading-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 20px;
+  align-items: start;
+}
+
+.profile-meta {
+  min-width: 0;
+}
+
+.profile-left-activity {
+  margin-top: 22px;
+}
+
+.profile-left-evaluation {
+  margin-top: 18px;
+}
+
+.profile-left-evaluation .personal-panel {
+  margin: 0;
+}
+
+/* 4次審査 */
+
+.profile-assignment {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.fourth-screening-box {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fourth-screening-box .assignment-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+/* ========================================
+   スマホ版
+======================================== */
+
 @media (max-width: 600px) {
 
   .profile-heading-layout {
@@ -773,31 +824,24 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
     grid-template-columns: minmax(0, 1fr) 124px !important;
     gap: 12px !important;
     align-items: start !important;
-    width: 100% !important;
   }
 
   .profile-meta {
     min-width: 0 !important;
-    width: 100% !important;
   }
 
   .profile-assignment {
-    display: block !important;
     width: 124px !important;
     min-width: 124px !important;
     max-width: 124px !important;
     margin: 0 !important;
     padding: 0 !important;
-    box-sizing: border-box !important;
   }
 
   .fourth-screening-box {
-    display: block !important;
     width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
     padding: 12px 10px !important;
-    overflow-wrap: normal !important;
+    box-sizing: border-box !important;
     word-break: normal !important;
   }
 
@@ -809,27 +853,43 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   .fourth-screening-box .assignment-item {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
     gap: 5px !important;
     padding: 8px 0 !important;
-    min-width: 0 !important;
   }
 
   .fourth-screening-box .assignment-item > span {
     font-size: 10px !important;
-    line-height: 1.5 !important;
-    white-space: normal !important;
     word-break: keep-all !important;
+    line-height: 1.5 !important;
   }
 
   .fourth-screening-box .assignment-item > strong {
     font-size: 12px !important;
-    line-height: 1.5 !important;
     overflow-wrap: anywhere !important;
   }
 
-  .profile-name-row {
-    flex-wrap: wrap;
+  .profile-left-activity {
+    margin-top: 20px;
   }
 
+  .profile-left-evaluation {
+    margin-top: 16px;
+  }
+
+  .profile-left-evaluation .personal-panel {
+    padding: 12px;
+  }
+
+  .profile-left-evaluation .evaluation-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .profile-left-evaluation .eval-button,
+  .profile-left-evaluation .favorite-large {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
 }
+
