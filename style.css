@@ -676,3 +676,92 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 
 
 
+/* ========================================
+   4次審査のグループ枠
+======================================== */
+
+.fourth-screening-box {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #ded8ce;
+  border-radius: 10px;
+  background: #faf8f4;
+}
+
+.fourth-screening-title {
+  margin-bottom: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e5dfd6;
+  color: #504b45;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.fourth-screening-box .assignment-item {
+  padding: 7px 0;
+}
+
+.fourth-screening-box .assignment-item:last-child {
+  padding-bottom: 0;
+}
+
+/* ========================================
+   ≠MEメンバー一致表示：薄緑の枠
+======================================== */
+
+.member-match-green {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid #c9dfc9;
+  border-radius: 8px;
+  background: #f0f7ef;
+}
+
+.member-match-green-title {
+  margin-bottom: 7px;
+  color: #54775a;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.member-match-green-names {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 8px;
+}
+
+.member-match-green .member-match-name {
+  color: #354f3b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* スマホ版 */
+
+@media (max-width: 600px) {
+  .fourth-screening-box {
+    padding: 11px 12px;
+  }
+
+  .fourth-screening-title {
+    font-size: 12px;
+  }
+
+  .member-match-green {
+    padding: 9px 10px;
+  }
+
+  .member-match-green-title {
+    font-size: 10px;
+  }
+}
+
+
+
