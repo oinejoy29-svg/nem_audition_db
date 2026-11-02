@@ -764,4 +764,56 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
 }
 
 
+/* ========================================
+   個人ページ：スマホ版の4次審査配置
+======================================== */
+
+@media (max-width: 600px) {
+
+  .profile-heading-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 32%;
+    align-items: start;
+    column-gap: 12px;
+  }
+
+  .profile-meta {
+    min-width: 0;
+  }
+
+  .profile-assignment {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .fourth-screening-box {
+    width: 100%;
+    padding: 12px 10px;
+  }
+
+  .fourth-screening-title {
+    font-size: 12px;
+  }
+
+  .fourth-screening-box .assignment-item {
+    padding: 8px 0;
+  }
+
+  .fourth-screening-box .assignment-item span {
+    font-size: 10px;
+  }
+
+  .fourth-screening-box .assignment-item strong {
+    font-size: 12px;
+  }
+
+  .profile-name-row {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
 
