@@ -948,16 +948,28 @@ function renderList() {
     });
   }
 
-  function matchMarkup(candidate, type) {
-    const matches = matchingMembers(candidate, type);
 
-    if (!matches.length) return "";
+function matchMarkup(candidate, type) {
+  const matches = matchingMembers(candidate, type);
 
+  if (!matches.length) return "";
+
+  let label = "一致する≠MEメンバー";
+
+  if (type === "schoolYear") {
+    label = "同年代の≠MEメンバー";
+  }
+
+  if (type === "hometown") {
+    const hometown = candidate.profile?.hometown || "同じ地域";
+    label = `${hometown}出身の≠MEメンバー`;
+  }
+
+  if (type === "bloodType") {
+    // 血液型の従来の表示を維持
     return `
       <div class="member-match">
-        <span class="member-match-label">
-          ≠ME：
-        </span>
+        <span class="member-match-label">≠ME：</span>
         ${matches.map(member => `
           <span class="member-match-name">
             ${escapeHTML(member.name)}
@@ -966,6 +978,24 @@ function renderList() {
       </div>
     `;
   }
+
+  return `
+    <div class="member-match member-match-green">
+      <div class="member-match-green-title">
+        ${escapeHTML(label)}
+      </div>
+
+      <div class="member-match-green-names">
+        ${matches.map(member => `
+          <span class="member-match-name">
+            ${escapeHTML(member.name)}
+          </span>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
 
   /* ========================================
      活動歴
@@ -1007,78 +1037,67 @@ function renderList() {
      プロフィールタブ
   ======================================== */
 
-  function profilePanel(candidate) {
-    const profile = candidate.profile || {};
 
-    const officialUrl = safeUrl(
-      candidate.officialUrl
-    );
+function profilePanel(candidate) {
+  const profile = candidate.profile || {};
 
-    const schoolMatches =
-      matchingMembers(candidate, "schoolYear");
+  const officialUrl = safeUrl(
+    candidate.officialUrl
+  );
 
-    return `
-      <div class="info-grid">
-        ${infoItem(
-          "生年月日",
-          profile.birthDate
-        )}
+  return `
+    <div class="info-grid">
 
-        ${infoItem(
-          "出身地",
-          profile.hometown,
-          matchMarkup(candidate, "hometown")
-        )}
+      ${infoItem(
+        "生年月日",
+        profile.birthDate,
+        matchMarkup(candidate, "schoolYear")
+      )}
 
-        ${infoItem(
-          "身長",
-          profile.height
-        )}
+      ${infoItem(
+        "出身地",
+        profile.hometown,
+        matchMarkup(candidate, "hometown")
+      )}
 
-        ${infoItem(
-          "血液型",
-          profile.bloodType,
-          matchMarkup(candidate, "bloodType")
-        )}
+      ${infoItem(
+        "身長",
+        profile.height
+      )}
 
-        ${infoItem(
-          "趣味",
-          profile.hobbies
-        )}
+      ${infoItem(
+        "血液型",
+        profile.bloodType,
+        matchMarkup(candidate, "bloodType")
+      )}
 
-        ${infoItem(
-          "特技",
-          profile.skills
-        )}
-      </div>
+      ${infoItem(
+        "趣味",
+        profile.hobbies
+      )}
 
-      ${schoolMatches.length ? `
-        <section class="info-section">
-          <h3>同学年の≠MEメンバー</h3>
-          <div class="member-match">
-            ${schoolMatches.map(member => `
-              <span class="member-match-name">
-                ${escapeHTML(member.name)}
-              </span>
-            `).join("")}
-          </div>
-        </section>
-      ` : ""}
+      ${infoItem(
+        "特技",
+        profile.skills
+      )}
 
-      ${officialUrl ? `
-        <p>
-          <a
-            class="external-link"
-            href="${escapeHTML(officialUrl)}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式プロフィールを見る ↗
-          </a>
-        </p>
-      ` : ""}
-    `;
-  }
+    </div>
+
+    ${officialUrl ? `
+      <p>
+        <a
+          class="external-link"
+          href="${escapeHTML(officialUrl)}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          公式プロフィールを見る ↗
+        </a>
+      </p>
+    ` : ""}
+  `;
+}
+
 
   /* ========================================
      メンバー等の評価
@@ -1284,22 +1303,32 @@ function renderList() {
             </div>
           </div>
 
-          <div class="profile-assignment">
-            <div class="assignment-item">
-              <span>4次審査チーム</span>
-              ${teamMarkup(candidate.team)}
-            </div>
 
-            <div class="assignment-item">
-              <span>歌唱課題曲</span>
-              <strong>${valueOrFallback(songs.singing)}</strong>
-            </div>
+<div class="profile-assignment">
+  <div class="fourth-screening-box">
 
-            <div class="assignment-item">
-              <span>パフォーマンス課題曲</span>
-              <strong>${valueOrFallback(songs.performance)}</strong>
-            </div>
-          </div>
+    <div class="fourth-screening-title">
+      4次審査
+    </div>
+
+    <div class="assignment-item">
+      <span>チーム</span>
+      ${teamMarkup(candidate.team)}
+    </div>
+
+    <div class="assignment-item">
+      <span>歌唱課題曲</span>
+      <strong>${valueOrFallback(songs.singing)}</strong>
+    </div>
+
+    <div class="assignment-item">
+      <span>パフォーマンス課題曲</span>
+      <strong>${valueOrFallback(songs.performance)}</strong>
+    </div>
+
+  </div>
+</div>
+
         </div>
       </section>
 
