@@ -191,10 +191,6 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
   .profile-name-row .candidate-age { font-size: 13px; }
   .profile-basics { gap: 5px; margin-top: 10px; }
   .basic-chip { font-size: 10px; padding: 6px 8px; }
-  .profile-assignment { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: 100%; margin: 0; }
-  .assignment-item { min-width: 0; max-width: none; }
-  .assignment-item > span:first-child { font-size: 9px; }
-  .assignment-item strong, .assignment-item .team-label { font-size: 11px; }
   .activity-tag { padding: 6px 10px; font-size: 11px; }
   .personal-panel { padding: 13px; }
   .evaluation-row { gap: 6px; }
@@ -817,66 +813,118 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
    スマホ版
 ======================================== */
 
+
+/* 個人ページ：スマホ版レイアウト */
 @media (max-width: 600px) {
 
+  /* 左：プロフィール／右：4次審査 */
   .profile-heading-layout {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 124px !important;
-    gap: 12px !important;
-    align-items: start !important;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 132px;
+    gap: 12px;
+    align-items: start;
+    width: 100%;
   }
 
   .profile-meta {
-    min-width: 0 !important;
+    min-width: 0;
+    width: 100%;
   }
 
+  /* 名前と年齢 */
+  .profile-meta .profile-name-row h1 {
+    font-size: clamp(19px, 5vw, 25px);
+  }
+
+  .profile-name-row {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .profile-name-row .candidate-age {
+    font-size: 12px;
+  }
+
+  .profile-basics {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .basic-chip {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  /* 4次審査：幅を固定して縦書き化を防ぐ */
   .profile-assignment {
-    width: 124px !important;
-    min-width: 124px !important;
-    max-width: 124px !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: block;
+    width: 132px;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
   }
 
   .fourth-screening-box {
-    width: 100% !important;
-    padding: 12px 10px !important;
-    box-sizing: border-box !important;
-    word-break: normal !important;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px 10px;
+    box-sizing: border-box;
   }
 
   .fourth-screening-title {
-    font-size: 12px !important;
-    white-space: nowrap !important;
+    font-size: 12px;
+    white-space: nowrap;
   }
 
   .fourth-screening-box .assignment-item {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 5px !important;
-    padding: 8px 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    gap: 5px;
+    padding: 8px 0;
   }
 
   .fourth-screening-box .assignment-item > span {
-    font-size: 10px !important;
-    word-break: keep-all !important;
-    line-height: 1.5 !important;
+    display: block;
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 1.5;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .fourth-screening-box .assignment-item > strong {
-    font-size: 12px !important;
-    overflow-wrap: anywhere !important;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    font-size: 11px;
+    line-height: 1.5;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
+  .fourth-screening-box .team-label {
+    font-size: 11px;
+    min-width: 0;
+  }
+
+  /* 左側の活動歴 */
   .profile-left-activity {
     margin-top: 20px;
   }
 
+  /* 左側の評価欄 */
   .profile-left-evaluation {
     margin-top: 16px;
   }
 
   .profile-left-evaluation .personal-panel {
+    margin: 0;
     padding: 12px;
   }
 
@@ -892,4 +940,5 @@ code { font-size: .95em; background: #eee9e1; padding: 2px 5px; border-radius: 5
     padding: 7px 9px;
   }
 }
+
 
