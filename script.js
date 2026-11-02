@@ -1251,7 +1251,43 @@ function profilePanel(candidate) {
   /* ========================================
      個人詳細
   ======================================== */
+　
+function detailEvaluationMarkup(candidate, personal) {
+  return `
+    <section class="personal-panel">
+      <h2>自分用の評価</h2>
 
+      <div class="evaluation-row">
+        ${LIKE_TYPES.map(type => `
+          <button
+            class="eval-button"
+            type="button"
+            data-detail-like="${type.key}"
+            aria-pressed="${Boolean(
+              personal.likes?.[type.key]
+            )}"
+          >
+            ${type.label}
+            ${personal.likes?.[type.key] ? "♥" : "♡"}
+          </button>
+        `).join("")}
+
+        <button
+          class="favorite-large"
+          type="button"
+          data-detail-favorite
+          aria-pressed="${Boolean(personal.favorite)}"
+        >
+          ${personal.favorite
+            ? "★ お気に入り登録済み"
+            : "☆ お気に入りに登録"}
+        </button>
+      </div>
+    </section>
+  `;
+}
+
+  
   function renderDetail() {
     const candidate = candidates.find(
       item => item.id === activeCandidateId
@@ -1276,94 +1312,76 @@ function profilePanel(candidate) {
       panel = memoPanel(candidate);
     }
 
-    detailContent.innerHTML = `
-      <section class="profile-heading">
-        <div class="profile-heading-layout">
-          <div class="profile-meta">
-            <div class="profile-name-row">
-              <h1>${escapeHTML(candidate.name)}</h1>
 
-              ${ageMarkup(
-                getBirthDate(candidate)
-              )}
-            </div>
+<section class="profile-heading">
+  <div class="profile-heading-layout">
 
-            <div class="profile-basics">
-              ${candidate.profile?.birthDate ? `
-                <span class="basic-chip">
-                  ${escapeHTML(candidate.profile.birthDate)}
-                </span>
-              ` : ""}
+    <!-- 左側 -->
+    <div class="profile-meta">
 
-              ${candidate.profile?.hometown ? `
-                <span class="basic-chip">
-                  ${escapeHTML(candidate.profile.hometown)}
-                </span>
-              ` : ""}
-            </div>
-          </div>
+      <div class="profile-name-row">
+        <h1>${escapeHTML(candidate.name)}</h1>
 
+        ${ageMarkup(
+          getBirthDate(candidate)
+        )}
+      </div>
 
-<div class="profile-assignment">
-  <div class="fourth-screening-box">
+      <div class="profile-basics">
+        ${candidate.profile?.birthDate ? `
+          <span class="basic-chip">
+            ${escapeHTML(candidate.profile.birthDate)}
+          </span>
+        ` : ""}
 
-    <div class="fourth-screening-title">
-      4次審査
+        ${candidate.profile?.hometown ? `
+          <span class="basic-chip">
+            ${escapeHTML(candidate.profile.hometown)}
+          </span>
+        ` : ""}
+      </div>
+
+      <div class="profile-left-activity">
+        ${activityMarkup(candidate)}
+      </div>
+
+      <div class="profile-left-evaluation">
+        ${detailEvaluationMarkup(candidate, personal)}
+      </div>
+
     </div>
 
-    <div class="assignment-item">
-      <span>チーム</span>
-      ${teamMarkup(candidate.team)}
-    </div>
+    <!-- 右側 -->
+    <div class="profile-assignment">
+      <div class="fourth-screening-box">
 
-    <div class="assignment-item">
-      <span>歌唱課題曲</span>
-      <strong>${valueOrFallback(songs.singing)}</strong>
-    </div>
+        <div class="fourth-screening-title">
+          4次審査
+        </div>
 
-    <div class="assignment-item">
-      <span>パフォーマンス課題曲</span>
-      <strong>${valueOrFallback(songs.performance)}</strong>
+        <div class="assignment-item">
+          <span>チーム</span>
+          ${teamMarkup(candidate.team)}
+        </div>
+
+        <div class="assignment-item">
+          <span>歌唱課題曲</span>
+          <strong>${valueOrFallback(songs.singing)}</strong>
+        </div>
+
+        <div class="assignment-item">
+          <span>パフォーマンス課題曲</span>
+          <strong>${valueOrFallback(songs.performance)}</strong>
+        </div>
+
+      </div>
     </div>
 
   </div>
-</div>
+</section>
 
-        </div>
-      </section>
 
-      ${activityMarkup(candidate)}
 
-      <section class="personal-panel">
-        <h2>自分用の評価</h2>
-
-        <div class="evaluation-row">
-          ${LIKE_TYPES.map(type => `
-            <button
-              class="eval-button"
-              type="button"
-              data-detail-like="${type.key}"
-              aria-pressed="${Boolean(
-                personal.likes?.[type.key]
-              )}"
-            >
-              ${type.label}
-              ${personal.likes?.[type.key] ? "♥" : "♡"}
-            </button>
-          `).join("")}
-
-          <button
-            class="favorite-large"
-            type="button"
-            data-detail-favorite
-            aria-pressed="${Boolean(personal.favorite)}"
-          >
-            ${personal.favorite
-              ? "★ お気に入り登録済み"
-              : "☆ お気に入りに登録"}
-          </button>
-        </div>
-      </section>
 
       <div
         class="tab-list"
