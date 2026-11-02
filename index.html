@@ -30,6 +30,7 @@
     <section id="list-view" aria-labelledby="list-heading">
 
 
+
 <div class="list-toolbar">
   <div>
     <p class="eyebrow">CANDIDATES</p>
@@ -37,93 +38,174 @@
   </div>
 </div>
 
-<div class="filter-panel">
+<div class="compact-controls">
 
-  <div class="filter-panel-top">
+  <div class="control-buttons">
 
-    <label class="filter-field">
-      <span class="filter-label">並び替え</span>
-      <select id="sort-select">
-        <option value="team">4次審査チーム別</option>
-        <option value="name">名前順</option>
-        <option value="age">年齢順（若い順）</option>
-        <option value="height">身長順（高い順）</option>
-      </select>
-    </label>
+    <!-- 並び替え -->
+    <div class="control-menu-wrap">
+      <button
+        id="sort-menu-button"
+        class="control-main-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sort-menu"
+      >
+        <span class="control-icon">↕</span>
+        <span>並び替え</span>
+        <span class="control-chevron"></span>
+      </button>
 
-    <label class="filter-field">
-      <span class="filter-label">自己評価で絞り込み</span>
-      <select id="filter-select">
-        <option value="all">すべて</option>
-        <option value="favorite">★ お気に入り</option>
-        <option value="overall">♡ 総合いいね</option>
-        <option value="singing">♡ 歌唱いいね</option>
-        <option value="performance">♡ パフォーマンスいいね</option>
-      </select>
-    </label>
+      <div id="sort-menu" class="control-dropdown" hidden>
+        <button type="button" data-sort-value="team" class="is-selected">
+          チーム別
+        </button>
+        <button type="button" data-sort-value="name">
+          名前順
+        </button>
+        <button type="button" data-sort-value="age">
+          年齢順（若い順）
+        </button>
+        <button type="button" data-sort-value="height">
+          身長順（高い順）
+        </button>
+      </div>
+    </div>
+
+    <!-- 絞り込み -->
+    <button
+      id="profile-filter-button"
+      class="control-main-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="profile-filter-panel"
+    >
+      <span class="control-icon">☷</span>
+      <span>絞り込み</span>
+      <span id="profile-filter-dot" class="control-active-dot" hidden></span>
+    </button>
+
+    <!-- お気に入り・自己評価 -->
+    <div class="control-menu-wrap">
+      <button
+        id="favorite-menu-button"
+        class="control-main-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="favorite-menu"
+      >
+        <span class="control-icon">☆</span>
+        <span>お気に入り</span>
+        <span class="control-chevron"></span>
+      </button>
+
+      <div id="favorite-menu" class="control-dropdown control-dropdown-right" hidden>
+        <button type="button" data-favorite-value="all" class="is-selected">
+          すべて
+        </button>
+        <button type="button" data-favorite-value="favorite">
+          ★ お気に入り
+        </button>
+        <button type="button" data-favorite-value="overall">
+          ♡ 総合
+        </button>
+        <button type="button" data-favorite-value="singing">
+          ♡ 歌唱
+        </button>
+        <button type="button" data-favorite-value="performance">
+          ♡ パフォーマンス
+        </button>
+      </div>
+    </div>
 
   </div>
 
-  <div class="filter-divider"></div>
+  <!-- 既存JSとの連携用 -->
+  <div class="control-native-values" hidden>
+    <select id="sort-select">
+      <option value="team">チーム別</option>
+      <option value="name">名前順</option>
+      <option value="age">年齢順</option>
+      <option value="height">身長順</option>
+    </select>
 
-  <div class="filter-profile">
+    <select id="filter-select">
+      <option value="all">すべて</option>
+      <option value="favorite">お気に入り</option>
+      <option value="overall">総合</option>
+      <option value="singing">歌唱</option>
+      <option value="performance">パフォーマンス</option>
+    </select>
+  </div>
 
-    <span class="filter-label">
-      プロフィールで絞り込み
-    </span>
+  <!-- 絞り込みの展開パネル -->
+  <div id="profile-filter-panel" class="compact-filter-panel" hidden>
 
-    <div class="filter-profile-fields">
+    <div class="compact-filter-row">
+      <label for="origin-filter">出身地</label>
+      <select id="origin-filter">
+        <option value="all">すべて</option>
+      </select>
+    </div>
 
-      <label class="filter-field">
-        <span class="filter-sublabel">出身地</span>
-        <select id="origin-filter">
-          <option value="all">すべて</option>
-        </select>
-      </label>
-
-      <div class="filter-field">
-        <span class="filter-sublabel">年齢</span>
-
-        <div class="filter-age-range">
-          <input
-            id="age-min"
-            type="number"
-            min="0"
-            max="120"
-            placeholder="下限"
-            aria-label="最低年齢"
-          >
-          <span>〜</span>
-          <input
-            id="age-max"
-            type="number"
-            min="0"
-            max="120"
-            placeholder="上限"
-            aria-label="最高年齢"
-          >
-        </div>
+    <div class="compact-filter-row age-filter-row">
+      <div class="age-filter-heading">
+        <span>年齢</span>
+        <span id="age-range-label">すべて</span>
       </div>
 
+      <div id="age-range-control" class="age-range-control">
+        <div class="age-range-track"></div>
+        <div id="age-range-fill" class="age-range-fill"></div>
+
+        <input
+          id="age-min"
+          class="age-range-input age-range-min"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          aria-label="最低年齢"
+        >
+
+        <input
+          id="age-max"
+          class="age-range-input age-range-max"
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+          aria-label="最高年齢"
+        >
+      </div>
+
+      <div class="age-range-ends">
+        <span id="age-range-start">0歳</span>
+        <span id="age-range-end">100歳</span>
+      </div>
     </div>
+
+    <button id="profile-filter-reset" class="filter-reset-button" type="button">
+      条件をクリア
+    </button>
   </div>
 
-  <div class="filter-divider"></div>
-
-  <label
-    id="members-toggle-wrap"
-    class="members-toggle filter-members-toggle"
-    hidden
-  >
-    <input
-      type="checkbox"
-      id="show-members"
-      checked
-    >
-    <span>≠MEメンバーを表示</span>
-  </label>
-
 </div>
+
+<!-- ≠MEメンバー表示：従来どおり独立配置 -->
+<label
+  id="members-toggle-wrap"
+  class="members-toggle"
+  hidden
+>
+  <input
+    type="checkbox"
+    id="show-members"
+    checked
+  >
+  <span>≠MEメンバーを表示</span>
+</label>
+
 
 
 
