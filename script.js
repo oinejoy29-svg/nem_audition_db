@@ -1786,7 +1786,7 @@ screeningStatusFilter.addEventListener("change", () => {
 
         sortMenuButton.classList.toggle(
           "has-selection",
-          sortSelect.value !== "team"
+          sortSelect.value !== "name"
         );
 
         closeControlMenus();
