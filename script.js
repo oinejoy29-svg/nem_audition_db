@@ -764,11 +764,17 @@ function setupOriginFilter() {
 <div class="team-group-heading">
   <h2>${team}</h2>
 
-  ${team === "WHITE" ? `
-    <div class="team-assignment-songs">
-      <div>パフォ：す、好きじゃない！　　歌唱：モブノデレラ</div>
-    </div>
-  ` : ""}
+
+<div class="team-assignment-songs">
+  <div>
+    パフォ：${{
+      WHITE: "す、好きじゃない！",
+      BLUE: "P.I.C.",
+      BLACK: "チョコレートメランコリー"
+    }[team]}　　歌唱：モブノデレラ
+  </div>
+</div>
+
 
   <span class="team-member-count">
     ${teamCandidates.length}人
@@ -1288,28 +1294,20 @@ function profilePanel(candidate) {
   ======================================== */
 
 
+
 function getAssignmentSongs(candidate) {
-  // WHITEチーム共通の4次審査課題曲
-  if (candidate.team === "WHITE") {
-    return {
-      singing: "モブノデレラ",
-      performance: "す、好きじゃない！"
-    };
-  }
+  const performanceSongs = {
+    WHITE: "す、好きじゃない！",
+    BLUE: "P.I.C.",
+    BLACK: "チョコレートメランコリー"
+  };
 
-  // BLACK・BLUEは個別に登録された曲を表示
   return {
-    singing:
-      candidate.singingSong ||
-      candidate.assignments?.singing ||
-      "",
-
-    performance:
-      candidate.performanceSong ||
-      candidate.assignments?.performance ||
-      ""
+    singing: "モブノデレラ",
+    performance: performanceSongs[candidate.team] || ""
   };
 }
+
 
 
   /* ========================================
