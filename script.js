@@ -510,9 +510,40 @@ function filteredCandidates() {
 }
 
 
+
 function filteredMembers() {
-  return members.filter(matchesFilters);
+  return members.filter(member => {
+    // 出身地の絞り込み
+    const selectedOrigin = originFilter.value;
+
+    if (
+      selectedOrigin !== "all" &&
+      getItemOrigin(member) !== selectedOrigin
+    ) {
+      return false;
+    }
+
+    // 年齢の絞り込み
+    const age = getAge(getBirthDate(member));
+
+    const minAge = Number(ageMinInput.value);
+    const maxAge = Number(ageMaxInput.value);
+
+    const fullMin = Number(ageMinInput.min);
+    const fullMax = Number(ageMaxInput.max);
+
+    const ageFilterActive =
+      minAge > fullMin || maxAge < fullMax;
+
+    if (ageFilterActive) {
+      if (age === null) return false;
+      if (age < minAge || age > maxAge) return false;
+    }
+
+    return true;
+  });
 }
+
 
 /* 出身地の選択肢をデータから作成 */
 
