@@ -4,7 +4,7 @@
 
   /* ========================================
      基本設定
-  ======================================== */
+  ========================================
 
   const DATA_URL = "./data/candidates.json";
   const MEMBERS_URL = "./data/nem_members.json";
@@ -54,6 +54,9 @@ const LIKE_TYPES = [
 
   const sortSelect = document.getElementById("sort-select");
   const filterSelect = document.getElementById("filter-select");
+  const screeningStatusFilter =
+  　document.getElementById("screening-status-filter");
+
   
 　const originFilter = document.getElementById("origin-filter");
 　const ageMinInput = document.getElementById("age-min");
@@ -490,9 +493,22 @@ function matchesFilters(item) {
   return true;
 }
 
+
 function filteredCandidates() {
-  return candidates.filter(matchesFilters);
+  const screeningStatus = screeningStatusFilter.value;
+
+  return candidates.filter(candidate => {
+    // 5次通過者を選択している場合
+    if (screeningStatus === "fifth" && candidate.passed5 !== true) {
+      return false;
+    }
+
+    // 4次通過者の場合は32名全員が対象
+    // 出身地・年齢・お気に入り等の条件も適用
+    return matchesFilters(candidate);
+  });
 }
+
 
 function filteredMembers() {
   return members.filter(matchesFilters);
@@ -1553,6 +1569,12 @@ detailContent.innerHTML = `
   
 originFilter.addEventListener("change", renderList);
 
+screeningStatusFilter.addEventListener("change", () => {
+  updateProfileFilterIndicator();
+  renderList();
+});
+
+
   ageMinInput.addEventListener("input", () => {
     updateAgeRange("min");
     renderList();
@@ -1915,23 +1937,28 @@ originFilter.addEventListener("change", renderList);
     updateProfileFilterIndicator();
   }
 
-  function updateProfileFilterIndicator() {
-    const ageActive =
-      Number(ageMinInput.value) >
-        Number(ageMinInput.min) ||
-      Number(ageMaxInput.value) <
-        Number(ageMaxInput.max);
 
-    const active =
-      originFilter.value !== "all" || ageActive;
+function updateProfileFilterIndicator() {
+  const ageActive =
+    Number(ageMinInput.value) > Number(ageMinInput.min) ||
+    Number(ageMaxInput.value) < Number(ageMaxInput.max);
 
-    profileFilterDot.hidden = !active;
+  const screeningActive =
+    screeningStatusFilter.value !== "fifth";
 
-    profileFilterButton.classList.toggle(
-      "has-selection",
-      active
-    );
-  }
+  const active =
+    screeningActive ||
+    originFilter.value !== "all" ||
+    ageActive;
+
+  profileFilterDot.hidden = !active;
+
+  profileFilterButton.classList.toggle(
+    "has-selection",
+    active
+  );
+}
+
 
   ageMinInput.addEventListener("input", () => {
     updateAgeRange("min");
@@ -1946,15 +1973,18 @@ originFilter.addEventListener("change", renderList);
     updateProfileFilterIndicator
   );
 
-  profileFilterReset.addEventListener("click", () => {
-    originFilter.value = "all";
 
-    ageMinInput.value = ageMinInput.min;
-    ageMaxInput.value = ageMaxInput.max;
+profileFilterReset.addEventListener("click", () => {
+  screeningStatusFilter.value = "fifth";
+  originFilter.value = "all";
 
-    updateAgeRange();
-    renderList();
-  });
+  ageMinInput.value = ageMinInput.min;
+  ageMaxInput.value = ageMaxInput.max;
+
+  updateAgeRange();
+  renderList();
+});
+
 
   // 初期状態
   updateAgeRange();
